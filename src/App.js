@@ -11,6 +11,7 @@ import ReferencePage from "./Pages/ReferencePage";
 import { COERegulationsPage } from "./Pages/COERegulationsPage";
 import ProducePage from "./Pages/ProductTypePage";
 import UpdatesPage from "./Pages/UpdatesPage";
+import AlertsPage from "./Pages/AlertsPage";
 import SearchResultsPage from "./Pages/SearchResultsPage";
 
 export default function App() {
@@ -69,6 +70,9 @@ export default function App() {
             <Route path="/updates">
               <Updates />
             </Route>
+            <Route path="/Alerts">
+                <Alerts />
+            </Route>
           </Switch>
         </div>
       </Router>
@@ -110,6 +114,9 @@ function SearchResults() {
 }
 function Updates() {
     return <UpdatesPage />
+}
+function Alerts() {
+    return <AlertsPage />
 }
 function ReactDefault() {
   return (
