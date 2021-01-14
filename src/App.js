@@ -43,7 +43,7 @@ export default function App() {
             <Route path="/baked">
               <Home />
             </Route>
-            <Route path="/canned">
+            <Route path="/Drinks">
               <Home />
             </Route>
             <Route path="/processed">

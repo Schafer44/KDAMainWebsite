@@ -25,7 +25,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   comment = {
     currentID: 0,
       currentName: "",
-      currentParent: "root",
+      currentParent: "",
     currentURLID: "",
     parent: "",
     titles: [""],
@@ -112,7 +112,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     });*/
 
     return this.comment.titles.map((data) => {
-      let replace = "/" + data.replace(/ /g, "_").toLowerCase();
+      let replace = "/" + data.replace(/ /g, "_");
       if (this.comment.url !== "/") {
           replace = this.comment.url + replace;
         }
@@ -174,11 +174,13 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
         let lastUrl = this.comment.url.split("/");
         console.log("LastBitofURL: " + lastUrl);
         if (lastUrl[1] !== "") {
-            this.comment.parent = "drinks";
-            this.comment.currentName ="drinks";
+            this.comment.parent = lastUrl[1];
+            this.comment.currentParent = lastUrl[1];
+            this.comment.currentName = lastUrl[1];
         }
         else {
             this.comment.parent = "root";
+            this.comment.currentParent = "root";
             this.comment.currentName = "root";
         }
         
