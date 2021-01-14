@@ -3,6 +3,7 @@ import { Button } from "antd";
 import "../CSS/Homepage.css";
 //import Data from "../Data/FoodType.json";
 import RightData from "../Data/FoodCategories.json";
+import Data from "../Data/data.json";
 
 import { ProductBody } from "./ProductBody";
 import { StarOutlined } from '@ant-design/icons';
@@ -23,6 +24,8 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   //Properties accessed in methods below to store temporary variables
   comment = {
     currentID: 0,
+      currentName: "",
+      currentParent: "root",
     currentURLID: "",
     parent: "",
     titles: [""],
@@ -47,7 +50,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   }
 
   changerStar(name: string) {
-    this.setState(prevState => ({
+   /* this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
     console.log("Current Name:" + name);
@@ -55,11 +58,43 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
       if (data.parent === name) {
         data.starState = !data.starState;
       }
-    })
+    })*/
+
+
+      this.setState(prevState => ({
+          isToggleOn: !prevState.isToggleOn
+      }));
+      console.log("Current Name:" + name);
+      Data.data[this.comment.parent].forEach((data) => {
+          if (data.parent === name) {
+              data.starState = !data.starState;
+          }
+      })
   }
 
-  renderButtons() {
-    RightData.types.forEach((data) => {
+    renderButtons() {
+
+        Data.data[this.comment.parent].children.forEach((data) => {
+            if (Data.data[data] !== undefined)
+            {
+                if (Data.data[data].type !== "category")
+                {
+                    return (
+                        <>
+                            <p>HELLO</p>
+                            <ProductBody />
+                        </>
+                    );
+                }
+            }
+                //console.log("NEW ID:" + this.comment.currentID);
+                //console.log("Type: "+ Data.title[val]);
+                //return "HI" + Data.title[val];
+            this.comment.titles = Data.data[this.comment.parent].children;
+            
+        });
+        
+           /*RightData.types.forEach((data) => {
       if (data.id === this.comment.currentID) {
         console.log(data.productPage);
         if (data.productPage)
@@ -74,20 +109,21 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
         //return "HI" + Data.title[val];
         this.comment.titles = data.title;
       }
-    });
+    });*/
 
     return this.comment.titles.map((data) => {
       let replace = "/" + data.replace(/ /g, "_").toLowerCase();
       if (this.comment.url !== "/") {
-        replace = this.comment.url + replace;
-      }
+          replace = this.comment.url + replace;
+        }
+
       // console.log("URL NAV: "+replace);
       return (
           <Button className="buttons" type="primary" shape="round">
             <a href={"" + replace}>{data}</a>
 </Button>
       );
-    });
+        });
   }
 
   getStarState(name:string){
@@ -112,29 +148,57 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   }
 
   //Retrieves Header
-  getParent(num: number) {
+    getParent(/*num: number*/ currentName: string) {
+
+
+        Data.data[this.comment.parent].children.forEach((data) => {
+            if (Data.data[data].name === currentName) {
+                this.comment.currentParent = Data.data[data].currentName;
+                
+            }
+        });
+
+
+        /*
     RightData.types.forEach((data) => {
       if (data.id === num) {
         //console.log("Parent:" + data.parent);
         this.comment.parent = data.parent;
       }
-    });
-
-    return this.comment.parent;
+    });*/
+        return this.comment.currentParent;
   }
 
   //Retrieves current Product Parent ID for display
-  getID() {
-    let lastUrl = this.comment.url.split("/").pop();
-
+    getID() {
+        let lastUrl = this.comment.url.split("/");
+        console.log("LastBitofURL: " + lastUrl);
+        if (lastUrl[1] !== "") {
+            this.comment.parent = "drinks";
+            this.comment.currentName ="drinks";
+        }
+        else {
+            this.comment.parent = "root";
+            this.comment.currentName = "root";
+        }
+        
     //console.log("LastBitofURL: " + lastUrl);
+      
+       /* Data.data[this.comment.parent].children.forEach((data) => {
+        if (Data.data[data].parent === lastUrl) {
+            this.comment.currentName = Data.data[data].name;
+        }
+        });*/
 
-    RightData.types.forEach((data) => {
+
+   /* RightData.types.forEach((data) => {
       if (data.parent.replace(/ /g, "_").toLowerCase() === lastUrl) {
-        this.comment.currentID = data.id;
-      }
-    });
+        this.comment.currentID = data.id; 
 
-    return this.comment.currentID;
+      }
+    });*/
+
+
+      return this.comment.currentName;                  // change this to go back to original! to currentID
   }
 }

@@ -4,6 +4,7 @@ import { ProductInfo, ProductTypes } from "../Data/types";
 import { TestProductList } from "../Data/TestData";
 import { bool } from "prop-types";
 import RightData from "../Data/FoodCategories.json";
+import Data from "../Data/data.json";
 import { RegulationsDisplay } from "./RegulationsDisplay";
 
 interface RegulationsPageProps {}
@@ -86,6 +87,7 @@ export class ProductBody extends React.Component<
         this.comment.currentID = data.id;
       }
     });
+
 
     if (lastUrl) {
       return (this.comment.parent = lastUrl.toUpperCase());
