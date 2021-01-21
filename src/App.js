@@ -32,7 +32,7 @@ export default function App() {
               <About />
             </Route>
             <Route path="/reactdefault">
-              <ReactDefault />
+              <Home />
             </Route>
             <Route path="/snapInfo">
               <SNAPInfo />
@@ -40,13 +40,13 @@ export default function App() {
             <Route exact path="/produce">
               <Home />
             </Route>
-            <Route path="/baked">
+            <Route path="/Alcoholic">
               <Home />
             </Route>
-            <Route path="/Drinks">
+            <Route path="/Drinks"> 
               <Home />
             </Route>
-            <Route path="/processed">
+            <Route path="/RefridgeratedAndFrozenProcessedFoods">
               <Home />
             </Route>
             <Route exact path="/produce/:id">

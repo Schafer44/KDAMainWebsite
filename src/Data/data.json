@@ -126,7 +126,7 @@
       },
       "Non-Alcoholic": {
         "type": "category",
-        "name": "Non Alcoholic",
+        "name": "Non-Alcoholic",
         "parent": "drinks",
         "children": [
           "juiceCider"

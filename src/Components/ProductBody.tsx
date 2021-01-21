@@ -19,7 +19,8 @@ export class ProductBody extends React.Component<
     date: new Date(),
     text: "I hope you enjoy learning React!",
     currentID: 0,
-    currentIDName: "",
+      currentIDName: "",
+      currentName: "",
     currentURLID: "",
     parent: "",
     home: {
@@ -55,7 +56,7 @@ export class ProductBody extends React.Component<
       regulatoryRequirements: "Default Requirements",
     };
 
-    for (let testProductListKey in TestProductList) {
+    /*for (let testProductListKey in TestProductList) {
       if (testProductListKey === idName) {
         console.log("IT MATCHES");
         par = {
@@ -70,8 +71,21 @@ export class ProductBody extends React.Component<
           imageURL: TestProductList[testProductListKey].imageURL,
         };
       }
-    }
-
+    }*/
+      let lastUrl = this.comment.home.url.split("/").pop();
+      if (lastUrl !== undefined) {
+          par = {
+              name: Data.data[lastUrl].name, //!!
+              category: Data.data[lastUrl].parent, //!!
+              description: Data.data[lastUrl].description, //!!
+              snap: Data.data[lastUrl].snapEligible, //!!
+              regulatoryRequirements: Data.data[lastUrl].regulation, //!!
+              requiredLicenses: Data.data[lastUrl].license, //!!
+              productTesting: Data.data[lastUrl].testingRequired, //!!
+              relatedItems: Data.data[lastUrl].examples, //!!
+              // Tempurature requirements!!!!!!
+          };
+      }
     return <RegulationsDisplay productProp={par} />;
   }
 
@@ -81,14 +95,18 @@ export class ProductBody extends React.Component<
 
     //console.log("LastBitofURL: " + lastUrl);
 
-    RightData.types.forEach((data) => {
+    /*RightData.types.forEach((data) => {
       if (data.parent.replace(" ", "_").toLowerCase() === lastUrl) {
         this.comment.parent = data.parent;
         this.comment.currentID = data.id;
       }
-    });
-
-
+      });
+      */
+      if (lastUrl !== undefined) {
+          Data.data[lastUrl]
+          this.comment.parent = Data.data[lastUrl].name;
+          this.comment.currentName = Data.data[lastUrl].name;
+      }
     if (lastUrl) {
       return (this.comment.parent = lastUrl.toUpperCase());
     }

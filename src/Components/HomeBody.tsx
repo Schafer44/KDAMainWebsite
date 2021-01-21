@@ -75,18 +75,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     renderButtons() {
 
         Data.data[this.comment.parent].children.forEach((data) => {
-            if (Data.data[data] !== undefined)
-            {
-                if (Data.data[data].type !== "category")
-                {
-                    return (
-                        <>
-                            <p>HELLO</p>
-                            <ProductBody />
-                        </>
-                    );
-                }
-            }
+            
                 //console.log("NEW ID:" + this.comment.currentID);
                 //console.log("Type: "+ Data.title[val]);
                 //return "HI" + Data.title[val];
@@ -111,8 +100,8 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
       }
     });*/
 
-    return this.comment.titles.map((data) => {
-      let replace = "/" + data.replace(/ /g, "_");
+    return this.comment.titles.map((obj) => {
+      let replace = "/" + obj.replace(/ /g, "_");
       if (this.comment.url !== "/") {
           replace = this.comment.url + replace;
         }
@@ -120,8 +109,8 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
       // console.log("URL NAV: "+replace);
       return (
           <Button className="buttons" type="primary" shape="round">
-            <a href={"" + replace}>{data}</a>
-</Button>
+            <a href={"" + replace}>{obj}</a>
+           </Button>
       );
         });
   }
@@ -151,10 +140,19 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     getParent(/*num: number*/ currentName: string) {
 
 
-        Data.data[this.comment.parent].children.forEach((data) => {
-            if (Data.data[data].name === currentName) {
-                this.comment.currentParent = Data.data[data].currentName;
-                
+        Data.data[this.comment.parent].children.forEach((obj) => {
+            if (Data.data[obj].name.replace(/ /g, "") === currentName) {
+                this.comment.currentParent = Data.data[obj].name;
+                if (Data.data[obj] !== undefined) {
+                    if (Data.data[obj].type !== "category") {
+                        return (
+                            <>
+                                <p>HELLO</p>
+                                <ProductBody />
+                            </>
+                        );
+                    }
+                }
             }
         });
 
@@ -171,12 +169,12 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
 
   //Retrieves current Product Parent ID for display
     getID() {
-        let lastUrl = this.comment.url.split("/");
+        let lastUrl = this.comment.url.split("/").pop();
         console.log("LastBitofURL: " + lastUrl);
-        if (lastUrl[1] !== "") {
-            this.comment.parent = lastUrl[1];
-            this.comment.currentParent = lastUrl[1];
-            this.comment.currentName = lastUrl[1];
+        if (lastUrl !== "" && lastUrl !== undefined) {
+            this.comment.parent = lastUrl;
+            this.comment.currentParent = lastUrl;
+            this.comment.currentName = lastUrl;
         }
         else {
             this.comment.parent = "root";
