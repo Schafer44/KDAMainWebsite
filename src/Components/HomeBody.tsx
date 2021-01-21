@@ -74,6 +74,17 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
 
     renderButtons() {
 
+        if (Data.data[this.comment.parent] !== undefined) {
+            if (Data.data[this.comment.parent].type === "entry") {
+                return (
+                    <>
+                        <p>HELLO</p>
+                        <ProductBody />
+                    </>
+                );
+            }
+        }
+
         Data.data[this.comment.parent].children.forEach((data) => {
             
                 //console.log("NEW ID:" + this.comment.currentID);
@@ -139,23 +150,24 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   //Retrieves Header
     getParent(/*num: number*/ currentName: string) {
 
-
-        Data.data[this.comment.parent].children.forEach((obj) => {
-            if (Data.data[obj].name.replace(/ /g, "") === currentName) {
-                this.comment.currentParent = Data.data[obj].name;
-                if (Data.data[obj] !== undefined) {
-                    if (Data.data[obj].type !== "category") {
-                        return (
-                            <>
-                                <p>HELLO</p>
-                                <ProductBody />
-                            </>
-                        );
-                    }
+        if (Data.data[currentName].type === "category")
+        {
+            Data.data[this.comment.parent].children.forEach((obj) => {
+                if (Data.data[obj].name.replace(/ /g, "") === currentName) {
+                    this.comment.currentParent = Data.data[obj].name;
+                    /*if (Data.data[obj] !== undefined) {
+                        if (Data.data[obj].type !== "category") {
+                            return (
+                                <>
+                                    <p>HELLO</p>
+                                    <ProductBody />
+                                </>
+                            );
+                        }
+                    }*/
                 }
-            }
-        });
-
+            });
+        }
 
         /*
     RightData.types.forEach((data) => {

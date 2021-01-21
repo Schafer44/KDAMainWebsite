@@ -103,7 +103,6 @@ export class ProductBody extends React.Component<
       });
       */
       if (lastUrl !== undefined) {
-          Data.data[lastUrl]
           this.comment.parent = Data.data[lastUrl].name;
           this.comment.currentName = Data.data[lastUrl].name;
       }
