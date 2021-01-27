@@ -2,18 +2,32 @@
   "data":
     {
       "updates": {
-        "name": "Updates",
-        "list": [
-          { "1": [ "12-11-2020", "update 1 Description" ] },
-          { "2": [ "12-11-2020", "update 2 Description" ] }
-        ]
+        "SAMPLE UPDATE 1": {
+          "title": "SAMPLE UPDATE 1",
+          "preview": "Short preview of update 1",
+          "description": "Long description of update 1",
+          "date": "(\"08-30-2020\")"
+        },
+        "SAMPLE UPDATE 2": {
+          "title": "SAMPLE UPDATE 2",
+          "preview": "Short preview of uodate 2",
+          "description": "Long description of update 2",
+          "date": "(\"09-01-2020\")"
+        }
       },
       "alerts": {
-        "name": "Alerts",
-        "list": [
-          { "1": [ "Alert 1 Name", "12-11-2020", "Alert 1 Description" ] },
-          { "2": [ "Alert 2 Name", "12-11-2020", "Alert 2 Description" ] }
-        ]
+        "SAMPLE ALERT 1": {
+          "title": "SAMPLE ALERT 1",
+          "preview": "Short preview of alert 1",
+          "description": "Long description of alert 1",
+          "date": "(\"08-30-2020\")"
+        },
+        "SAMPLE ALERT 2": {
+          "title": "SAMPLE ALERT 2",
+          "preview": "Short preview of alert 2",
+          "description": "Long description of alert 2",
+          "date": "(\"09-01-2020\")"
+        }
       },
       "root": {
         "name": "root",

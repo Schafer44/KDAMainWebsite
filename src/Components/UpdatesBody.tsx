@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { TestUpdates } from "../Data/TestUpdates";
 import { Typography, Box } from '@material-ui/core';
 import "../CSS/UpdatesBody.css";
+import Data from "../Data/data.json";
 
 interface UpdatesState {
     cardsExpanded: boolean[],
@@ -34,7 +35,7 @@ export default class UpdatesBody extends React.Component<{}, UpdatesState> {
     constructor(props: any){
         super(props);
         this.state = {
-            cardsExpanded: new Array<boolean>(Object.values(TestUpdates).length),
+            cardsExpanded: new Array<boolean>(Object.values(Data.data.updates).length),
         };
     }
 
@@ -51,7 +52,7 @@ export default class UpdatesBody extends React.Component<{}, UpdatesState> {
     render() {
         return (
             <ScrollableBox>
-                {Object.values(TestUpdates).map( (update, index) => (
+                {Object.values(Data.data.updates).map( (update, index) => (
                     <StyledCard key={index} >
                         <CardHeader title = {update.title} subheader={update.date} className="updateTitle" />
                         <CardContent>

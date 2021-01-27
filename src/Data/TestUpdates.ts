@@ -11,6 +11,7 @@ export const TestUpdates: UpdateList = {
     "SAMPLE UPDATE 2":
     {
         title: "SAMPLE UPDATE 2",
+        preview: "Lorem ipsum dolor sit amet, an aeque vituperatoribus has",
         description: "Lorem Upsum",
         date: ("09-01-2020")
     },
