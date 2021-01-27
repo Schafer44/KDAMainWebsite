@@ -127,7 +127,6 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   //Retrieves current Product Parent name for display
     getID() {
         let lastUrl = this.comment.url.split("/").pop();
-        console.log("LastBitofURL: " + lastUrl);
         if (lastUrl !== "" && lastUrl !== undefined) {
             this.comment.currentName = lastUrl;
         }

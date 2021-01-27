@@ -28,15 +28,9 @@ export default class KDAFooter extends React.Component {
                 <Grid item container direction="column" alignContent="center" xs={6} sm={4}>
                     <Typography variant="h6"> Support </Typography>
                     <Link color ="inherit" href="/about" > About Us </Link>
-                    <Link color ="inherit" href="/snapInfo"> Snap Eligibility </Link>
                     <Link color ="inherit" href="/references"> Reference Page </Link>
                     <Link color ="inherit" href="/contact"> Contact Us </Link>
                     <Link color ="inherit" href="/report"> File A Report </Link>
-                </Grid>
-                <Grid className="signUp" item container alignItems="center" direction="column" alignContent="center" xs={6} sm = {4} >
-                    <MarginTypography >Stay updated with KDA</MarginTypography>
-                    <TextField id="standard-basic" placeholder="Email Address" />
-                    <SignUpButton variant="contained" color="primary"> Sign Up </SignUpButton>
                 </Grid>
             </Grid>
         )

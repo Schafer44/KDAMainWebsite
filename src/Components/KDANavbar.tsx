@@ -53,7 +53,7 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
       right: false,
       drawerOpen: false,
     };
-    this.onSubmitSearch = this.onSubmitSearch.bind(this);
+    //this.onSubmitSearch = this.onSubmitSearch.bind(this);
   };
 
   toggleDrawer = (anchor: Anchor, open: boolean) => (
