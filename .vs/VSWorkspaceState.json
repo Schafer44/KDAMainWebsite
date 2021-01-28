@@ -5,8 +5,9 @@
     "\\src\\Components",
     "\\src\\CSS",
     "\\src\\Data",
-    "\\src\\Pages"
+    "\\src\\Pages",
+    "\\src\\Tests"
   ],
-  "SelectedNode": "\\src\\App.js",
+  "SelectedNode": "\\src\\Components\\HomeBody.tsx",
   "PreviewInSolutionExplorer": false
 }

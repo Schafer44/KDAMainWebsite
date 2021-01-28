@@ -14,70 +14,88 @@ import UpdatesPage from "./Pages/UpdatesPage";
 import AlertsPage from "./Pages/AlertsPage";
 import SearchResultsPage from "./Pages/SearchResultsPage";
 
-export default function App() {
-  return (
-    <>
-      <Router>
-        <div>
-          {/* A <Switch> looks through its children <Route>s and
+export default class App extends React.Component {
+    constructor(params){
+        super(params);
+        this.state = {loaded: false}
+    }
+    componentDidMount() {
+        fetch("data.json").then(data => data.json()).then(data => this.setState({ loaded: true, data:data}));
+    }
+    render(){
+        if (!this.state.loaded)
+            return "loading...";
+
+        return (
+            <>
+                <Router>
+                    <div>
+                        {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/test">
-              <Testing />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/reactdefault">
-              <Home />
-            </Route>
-            <Route path="/snapInfo">
-              <SNAPInfo />
-            </Route>
-            <Route exact path="/produce">
-              <Home />
-            </Route>
-            <Route path="/Alcoholic">
-              <Home />
-            </Route>
-            <Route path="/Drinks"> 
-              <Home />
-            </Route>
-            <Route path="/RefridgeratedAndFrozenProcessedFoods">
-              <Home />
-            </Route>
-            <Route exact path="/produce/:id">
-                <ProductPage />
-            </Route>
-            <Route exact path="/produce/:id/:id">
-              <ProductPage />
-            </Route>
-            <Route exact path="/report">
-              <FileReport />
-            </Route>
-            <Route path="/references">
-              <Reference />
-            </Route>
-            <Route path="/coeregulations">
-              <COERegulations />
-            </Route>
-            <Route path="/search">
-              <SearchResults />
-            </Route>
-            <Route path="/updates">
-              <Updates />
-            </Route>
-            <Route path="/Alerts">
-                <Alerts />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </>
-  );
+                        <Switch>
+                            <Route exact path="/">
+                                <Homepage data={this.state.data} />
+                            </Route>
+                            <Route path="/test">
+                                <Testing />
+                            </Route>
+                            <Route path="/about">
+                                <About />
+                            </Route>
+                            <Route path="/reactdefault">
+                                <Homepage data={this.state.data} />
+                            </Route>
+                            <Route path="/snapInfo">
+                                <SNAPInfo />
+                            </Route>
+                            <Route exact path="/produce">
+                                <Home />
+                            </Route>
+                            <Route path="/:id">
+                                <Home />
+                            </Route>
+                            <Route path="/:id:id">
+                                <Home />
+                            </Route>
+                            <Route path="/Drinks">
+                                <Home />
+                            </Route>
+                            <Route path="/RefridgeratedAndFrozenProcessedFoods">
+                                <Home />
+                            </Route>
+                            <Route exact path="/produce/:id">
+                                <ProductPage />
+                            </Route>
+                            <Route exact path="/produce/:id/:id">
+                                <ProductPage />
+                            </Route>
+                            <Route exact path="/produce/:id/:id">
+                                <ProductPage />
+                            </Route>
+                            <Route exact path="/report">
+                                <FileReport />
+                            </Route>
+                            <Route path="/references">
+                                <Reference />
+                            </Route>
+                            <Route path="/coeregulations">
+                                <COERegulations />
+                            </Route>
+                            <Route path="/search">
+                                <SearchResults />
+                            </Route>
+                            <Route path="/updates">
+                                <Updates />
+                            </Route>
+                            <Route path="/Alerts">
+                                <Alerts />
+                            </Route>
+                        </Switch>
+                    </div>
+                </Router>
+            </>
+        );
+    }
 }
 function Home() {
   return <Homepage />;
