@@ -15,13 +15,14 @@ export class Homepage extends React.Component {
     render() {
     return (
         <>
-            {JSON.stringify(this.props)}
         <Layout>
           <KDANavbar />
-          <HomeBody />
+                <HomeBody {...this.props}/>
           <KDAFooter />
         </Layout>
       </>
     );
   }
 }
+
+{/*this was above layout {JSON.stringify(this.props)}*/ }

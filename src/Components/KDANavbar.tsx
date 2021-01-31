@@ -37,8 +37,7 @@ enum KDADrawerRoutes {
     "Home" = "/",
     "Updates" = "/updates",
     "Alerts" = "/alerts",
-    "Report Violations" = "/report",
-    "Favorites" = "/"
+    "Report Violations" = "/report"
 }
 
 interface KDANavbarProps {}

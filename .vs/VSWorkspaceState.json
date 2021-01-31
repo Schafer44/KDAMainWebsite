@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\Components",
     "\\src\\CSS",
@@ -8,6 +9,6 @@
     "\\src\\Pages",
     "\\src\\Tests"
   ],
-  "SelectedNode": "\\src\\Components\\HomeBody.tsx",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }

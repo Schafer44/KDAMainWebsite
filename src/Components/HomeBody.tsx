@@ -2,14 +2,16 @@ import React from "react";
 import { Button } from "antd";
 import "../CSS/Homepage.css";
 //import Data from "../Data/FoodType.json";
+/*
 import RightData from "../Data/FoodCategories.json";
 import Data from "../Data/data.json";
-
+*/
 import { ProductBody } from "./ProductBody";
 import { StarOutlined } from '@ant-design/icons';
 //import { useHistory } from "react-router-dom";
 
 //<button onClick={() => useHistory().goBack()}>Back</button>
+
 
 export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
 
@@ -18,11 +20,12 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     super(props);
     this.state = {isToggleOn: true};
 
-    this.changerStar = this.changerStar.bind(this);
-  }
+      this.changerStar = this.changerStar.bind(this);
+    }
+ 
 
   //Properties accessed in methods below to store temporary variables
-  comment = {
+    comment = {
     currentID: 0,
       currentName: "",
       currentParent: "",
@@ -33,7 +36,8 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     url: window.location.pathname,
     star: StarOutlined,
     starName: "Hello",
-    starState: true,
+        starState: true,
+        newData: JSON.parse(JSON.stringify(this.props)),
   };
 
   //Renders display
@@ -54,7 +58,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
           isToggleOn: !prevState.isToggleOn
       }));
       console.log("Current Name:" + name);
-      Data.data[this.comment.parent].forEach((data) => {
+      this.comment.newData.data.data[this.comment.parent].forEach((data) => {
           if (data.parent === name) {
               data.starState = !data.starState;
           }
@@ -62,9 +66,8 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   }
 
     renderButtons() {
-
-        if (Data.data[this.comment.parent] !== undefined) {
-            if (Data.data[this.comment.parent].type === "entry") {
+        if (this.comment.newData.data.data[this.comment.parent] !== undefined) {
+            if (this.comment.newData.data.data[this.comment.parent].type === "entry") {
                 return (
                     <>
                         <p>HELLO</p>
@@ -73,11 +76,11 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
                 );
             }
         }
-            this.comment.titles = Data.data[this.comment.parent].children;
+        this.comment.titles = this.comment.newData.data.data[this.comment.parent].children;
 
        
             /* this.comment.titles = */this.comment.titles.map((string) =>
-                Data.data[string].name
+                this.comment.newData.data.data[string].name
 
         );
 
@@ -93,7 +96,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
       );
         });
   }
-
+    /*
   getStarState(name:string){
 
     RightData.types.forEach((data) => {
@@ -114,7 +117,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
 
     return this.comment.starState;
   }
-
+  */
   //Retrieves Header
     getParent(/*num: number*/ currentName: string) {
 

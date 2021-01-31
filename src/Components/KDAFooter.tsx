@@ -29,7 +29,6 @@ export default class KDAFooter extends React.Component {
                     <Typography variant="h6"> Support </Typography>
                     <Link color ="inherit" href="/about" > About Us </Link>
                     <Link color ="inherit" href="/references"> Reference Page </Link>
-                    <Link color ="inherit" href="/contact"> Contact Us </Link>
                     <Link color ="inherit" href="/report"> File A Report </Link>
                 </Grid>
             </Grid>

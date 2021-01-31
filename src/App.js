@@ -25,6 +25,7 @@ export default class App extends React.Component {
     render(){
         if (!this.state.loaded)
             return "loading...";
+        
 
         return (
             <>
@@ -36,59 +37,38 @@ export default class App extends React.Component {
                             <Route exact path="/">
                                 <Homepage data={this.state.data} />
                             </Route>
-                            <Route path="/test">
-                                <Testing />
-                            </Route>
                             <Route path="/about">
-                                <About />
+                                <AboutPage />
                             </Route>
                             <Route path="/reactdefault">
                                 <Homepage data={this.state.data} />
                             </Route>
                             <Route path="/snapInfo">
-                                <SNAPInfo />
-                            </Route>
-                            <Route exact path="/produce">
-                                <Home />
-                            </Route>
-                            <Route path="/:id">
-                                <Home />
-                            </Route>
-                            <Route path="/:id:id">
-                                <Home />
-                            </Route>
-                            <Route path="/Drinks">
-                                <Home />
-                            </Route>
-                            <Route path="/RefridgeratedAndFrozenProcessedFoods">
-                                <Home />
-                            </Route>
-                            <Route exact path="/produce/:id">
-                                <ProductPage />
-                            </Route>
-                            <Route exact path="/produce/:id/:id">
-                                <ProductPage />
-                            </Route>
-                            <Route exact path="/produce/:id/:id">
-                                <ProductPage />
+                                <SNAPInfoPage />
                             </Route>
                             <Route exact path="/report">
-                                <FileReport />
+                                <FileReportPage />
                             </Route>
                             <Route path="/references">
-                                <Reference />
+                                <ReferencePage />
                             </Route>
                             <Route path="/coeregulations">
-                                <COERegulations />
+                                <COERegulationsPage />
                             </Route>
                             <Route path="/search">
-                                <SearchResults />
+                                <SearchResultsPage />
                             </Route>
                             <Route path="/updates">
-                                <Updates />
+                                <UpdatesPage />
                             </Route>
                             <Route path="/Alerts">
-                                <Alerts />
+                                <AlertsPage />
+                            </Route>
+                            <Route path="/:id">
+                                <Homepage data={this.state.data} />
+                            </Route>
+                            <Route path="/Drinks/Alcoholic">
+                                <Homepage data={this.state.data} />
                             </Route>
                         </Switch>
                     </div>
@@ -97,45 +77,13 @@ export default class App extends React.Component {
         );
     }
 }
-function Home() {
-  return <Homepage />;
-}
 
-function ProductPage() {
-  return <ProducePage />;
-}
+/*function subCat() {
+    let { path, url } = useRouteMatch();
+    return (
+        );
+}*/
 
-//Use this route to test a page
-function Testing() {
-  return <> </>;
-}
-
-function About() {
-  return <AboutPage />;
-}
-
-function SNAPInfo() {
-  return <SNAPInfoPage />;
-}
-
-function FileReport() {
-  return <FileReportPage />;
-}
-function Reference() {
-  return <ReferencePage />
-}
-function COERegulations() {
-  return <COERegulationsPage />
-}
-function SearchResults() {
-    return <SearchResultsPage />
-}
-function Updates() {
-    return <UpdatesPage />
-}
-function Alerts() {
-    return <AlertsPage />
-}
 function ReactDefault() {
   return (
     <div className="App">

@@ -47,7 +47,6 @@ export class ProductBody extends React.Component<
   //Retrieves Header
   getParent() {
     const idName = this.getIDName();
-
     let par: ProductInfo = {
       name: "Default",
       category: ProductTypes.Processed,
