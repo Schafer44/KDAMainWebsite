@@ -20,7 +20,11 @@ export default class App extends React.Component {
         this.state = {loaded: false}
     }
     componentDidMount() {
-        fetch("data.json").then(data => data.json()).then(data => this.setState({ loaded: true, data:data}));
+        fetch("data.json").then(data => data.json()).then(data => this.setState({ loaded: true, data: data }));
+        if (!this.state.loaded)
+            {
+                fetch("/data.json").then(data => data.json()).then(data => this.setState({ loaded: true, data: data }));
+            }
     }
     render(){
         if (!this.state.loaded)
@@ -36,7 +40,7 @@ export default class App extends React.Component {
                         <Switch>
                             <Route exact path="/">
                                 <Homepage data={this.state.data} />
-                            </Route>
+                             </Route>
                             <Route path="/about">
                                 <AboutPage />
                             </Route>
