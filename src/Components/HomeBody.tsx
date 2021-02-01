@@ -85,7 +85,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
         );
 
         return this.comment.titles.map((obj) => {
-            let replace = "/" + obj.replace(/ /g, "");
+            let replace = "/" + obj.replace(/ /g, "_");
       if (this.comment.url !== "/") {
           replace = this.comment.url + replace;
         }
@@ -131,10 +131,10 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     getID() {
         let lastUrl = this.comment.url.split("/").pop();
         if (lastUrl !== "" && lastUrl !== undefined) {
-            this.comment.currentName = lastUrl;
+            this.comment.currentName = lastUrl.replace(/_/g," ");
         }
         else {
-            this.comment.currentName = "root";
+            this.comment.currentName = "Home";
         }
 
       return this.comment.currentName;                  // change this to go back to original! to currentID

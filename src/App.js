@@ -71,9 +71,6 @@ export default class App extends React.Component {
                             <Route path="/:id">
                                 <Homepage data={this.state.data} />
                             </Route>
-                            <Route path="/Drinks/Alcoholic">
-                                <Homepage data={this.state.data} />
-                            </Route>
                         </Switch>
                     </div>
                 </Router>
