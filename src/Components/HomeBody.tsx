@@ -19,8 +19,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
   constructor(props: any) {
     super(props);
     this.state = {isToggleOn: true};
-
-      this.changerStar = this.changerStar.bind(this);
+    this.changerStar = this.changerStar.bind(this);
     }
  
 
