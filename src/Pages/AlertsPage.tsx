@@ -6,12 +6,15 @@ import KDANavbar from "../Components/KDANavbar";
 import KDAFooter from "../Components/KDAFooter";
 
 export default class AlertsPage extends React.Component {
+    constructor(props: any) {
+        super(props);
+    }
   render() {
     return (
       <>
         <Layout>
           <KDANavbar />
-          <AlertsBody />
+                <AlertsBody {...this.props}/>
           <KDAFooter />
         </Layout>
       </>

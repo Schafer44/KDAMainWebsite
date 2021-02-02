@@ -34,8 +34,9 @@ const StyledCard = styled(Card)({
 export default class AlertsBody extends React.Component<{}, UpdatesState> {
     constructor(props: any){
         super(props);
+         let newData = JSON.parse(JSON.stringify(this.props));
         this.state = {
-            cardsExpanded: new Array<boolean>(Object.values(Data.data.alerts).length),
+            cardsExpanded: new Array<boolean>(Object.values(newData.data.data.alerts).length),
         };
     }
 
@@ -50,6 +51,7 @@ export default class AlertsBody extends React.Component<{}, UpdatesState> {
     }
 
     render() {
+        let newData = JSON.parse(JSON.stringify(this.props));
         return (
             <ScrollableBox>
                 {Object.values(Data.data.alerts).map((update, index) => (

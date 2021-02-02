@@ -15,13 +15,13 @@
       }
     },
     "alerts": {
-      "SAMPLE ALERT 1": {
+      "SAMPLE_ALERT_1": {
         "title": "SAMPLE ALERT 1",
         "preview": "Short preview of alert 1",
         "description": "Long description of alert 1",
         "date": "(\"08-30-2020\")"
       },
-      "SAMPLE ALERT 2": {
+      "SAMPLE_ALERT_2": {
         "title": "SAMPLE ALERT 2",
         "preview": "Short preview of alert 2",
         "description": "Long description of alert 2",

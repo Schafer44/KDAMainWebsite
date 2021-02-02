@@ -71,7 +71,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
                 return (
                     <>
                         <p>HELLO</p>
-                        <ProductBody />
+                        <ProductBody {...this.props}/>
                     </>
                 );
             }

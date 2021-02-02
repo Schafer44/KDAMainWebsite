@@ -63,10 +63,10 @@ export default class App extends React.Component {
                                 <SearchResultsPage />
                             </Route>
                             <Route path="/updates">
-                                <UpdatesPage />
+                                <UpdatesPage data={this.state.data}/>
                             </Route>
                             <Route path="/Alerts">
-                                <AlertsPage />
+                                <AlertsPage data={this.state.data}/>
                             </Route>
                             <Route path="/:id">
                                 <Homepage data={this.state.data} />
