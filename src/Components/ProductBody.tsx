@@ -63,14 +63,14 @@ export class ProductBody extends React.Component<
       let lastUrl = this.comment.home.url.split("/").pop();
       if (lastUrl !== undefined) {
           par = {
-              name: newData.data.data[lastUrl].name, //!!
-              category: newData.data.data[lastUrl].parent, //!!
-              description: newData.data.data[lastUrl].description, //!!
-              snap: newData.data.data[lastUrl].snapEligible, //!!
-              regulatoryRequirements: newData.data.data[lastUrl].regulation, //!!
-              requiredLicenses: newData.data.data[lastUrl].license, //!!
-              productTesting: newData.data.data[lastUrl].testingRequired, //!!
-              relatedItems: newData.data.data[lastUrl].examples, //!!
+              name: newData.data.data[lastUrl.replace(/_/g, " ")].name, //!!
+              category: newData.data.data[lastUrl.replace(/_/g, " ")].parent, //!!
+              description: newData.data.data[lastUrl.replace(/_/g, " ")].description, //!!
+              snap: newData.data.data[lastUrl.replace(/_/g, " ")].snapEligible, //!!
+              regulatoryRequirements: newData.data.data[lastUrl.replace(/_/g, " ")].regulation, //!!
+              requiredLicenses: newData.data.data[lastUrl.replace(/_/g, " ")].license, //!!
+              productTesting: newData.data.data[lastUrl.replace(/_/g, " ")].testingRequired, //!!
+              relatedItems: newData.data.data[lastUrl.replace(/_/g, " ")].examples, //!!
               // Tempurature requirements!!!!!!
           };
       }
