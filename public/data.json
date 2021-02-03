@@ -122,9 +122,8 @@
         "Homemade dried pasta",
         "Dry baking mixes",
         "Naturally fermented canned foods",
-        "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
+        "Foods and beverages prepared on or off site, sold ready for immediate consumption at least six or more times per calendar year.",
         "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
-        "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes2",
         "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
         "Vacuum packaged foods requiring temperature control for safety"
       ]
@@ -737,10 +736,10 @@
       "testingRequired": false,
       "regulation": "KDA Food Establishment License or Food Processors License required for production facility. Requires recipe approval; Better Process Control School (BPCS) required. KDA Meat and Poultry less than 20,000 birds a year) inspection required if canned meat is sold wholesale. Contact Kansas State University Value Added Foods Lab for more information on recipe approval and BPCS: www.ksre.ksu.edu/kvaf"
     },
-    "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.": {
+    "Foods and beverages prepared on or off site, sold ready for immediate consumption at least six or more times per calendar year.": {
       "type": "entry",
       "parent": "Prepared Foods",
-      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
+      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption at least six or more times per calendar year.",
       "description": "More info to come",
       "examples": "",
       "license": true,
