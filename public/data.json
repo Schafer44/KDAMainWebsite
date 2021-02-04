@@ -32,7 +32,7 @@
       "name": "Home",
       "children": [
         "Drinks",
-        "Refridgerated and Frozen Processed Foods",
+        "Refrigerated and Frozen Processed Foods",
         "Jams, Jellies, and Shelf Stable Food",
         "Meats, Eggs (less than 250 hens), Dairy Products, and Seafood",
         "Other Food Products",
@@ -50,10 +50,10 @@
         "Non-Alcoholic"
       ]
     },
-    "Refridgerated and Frozen Processed Foods": {
+    "Refrigerated and Frozen Processed Foods": {
       "type": "category",
       "parent": "Home",
-      "name": "Refridgerated and Frozen Processed Foods",
+      "name": "Refrigerated and Frozen Processed Foods",
       "children": [
         "Dough",
         "Non specialized processed food that is made and sold six or fewer days in a year."
@@ -133,7 +133,7 @@
       "name": "Alcoholic",
       "parent": "drinks",
       "children": [
-        "Alcoholic beverages ( less than 0.5 percent alcohol by volume)"
+        "Alcoholic beverages (less than 0.5 percent alcohol by volume)"
       ]
     },
     "Non-Alcoholic": {
@@ -197,7 +197,7 @@
       ]
     },
     "Baked goods (home kitchen)": {
-      "type": "entry",
+      "type": "category",
       "parent": "Other Food Products",
       "name": "Baked goods (home kitchen)",
       "description": "",
@@ -208,25 +208,25 @@
       "testingRequired": false,
       "regulation": "Follow labeling requirements (listed below). Note that breads with cheese baked in/on them require testing to determine their category (see testing table below).",
       "children": [
-        "Icing with more than65 percent sugar",
+        "Icing with more than 65 percent sugar",
         "Bread with cheese baked in or on top",
         "Pecan pie",
         "Baked products with potentially hazardous dairy and egg  products",
-        "Powdered sugar or milk Icing with more than65 percent sugar"
+        "Powdered sugar or milk Icing with more than 65 percent sugar"
       ]
     },
 
-    "Icing with more than65 percent sugar": {
+    "Icing with more than 65 percent sugar": {
       "type": "entry",
       "parent": "Baked goods (home kitchen)",
-      "name": "Icing with more than65 percent sugar with more than65 percent sugar",
+      "name": "Icing with more than 65 percent sugar",
       "description": "",
-      "examples": "Icing with more than65 percent sugar on cinnamon rolls",
+      "examples": "Icing with more than 65 percent sugar on cinnamon rolls",
       "license": false,
       "temperatureControl": false,
       "snapEligible": false,
       "testingRequired": false,
-      "regulation": "If the Icing with more than65 percent sugar is known to contain more than65 percent sugar, testing and licensing is not needed. Otherwise, testing and possibly licensing is required (see testing table)."
+      "regulation": "If the Icing with more than 65 percent sugar is known to contain more than 65 percent sugar, testing and licensing is not needed. Otherwise, testing and possibly licensing is required (see testing table)."
     },
     "Dry baking mixes": {
       "type": "entry",
@@ -436,7 +436,7 @@
     },
     "Non specialized processed food that is made and sold six or fewer days in a year.": {
       "type": "entry",
-      "parent": "Refridgerated and Frozen Processed Foods",
+      "parent": "Refrigerated and Frozen Processed Foods",
       "name": "Non specialized processed food that is made and sold six or fewer days in a year.",
       "description": "More info to come",
       "examples": "",
@@ -574,7 +574,7 @@
       "temperatureControl": false,
       "snapEligible": false,
       "testingRequired": false,
-      "regulation": "Pasteurized and processed at KDA licensed Dairy Manufacturing Plant; food establishment license required at point of sale. Note that if a vendor can provide information about a vacuum packaged cheese to show that it does not require refrigeration for safety (typically low water activity and low pH values), a food establishment license would NOT be required for the point of sale. "
+      "regulation": "Pasteurized and processed at KDA licensed Dairy Manufacturing Plant; Food establishment license required at point of sale. Note that if a vendor can provide information about a vacuum packaged cheese to show that it does not require refrigeration for safety (typically low water activity and low pH values), a food establishment license would NOT be required for the point of sale."
 
     },
     "Baked products with potentially hazardous dairy and egg  products": {
@@ -593,7 +593,7 @@
     "Dough": {
       "type": "entry",
       "name": "Dough",
-      "parent": "Refridgerated and Frozen Processed Foods",
+      "parent": "Refrigerated and Frozen Processed Foods",
       "description": "More info to come",
       "examples": "",
       "license": true,
@@ -748,10 +748,10 @@
       "testingRequired": false,
       "regulation": "If selling more than six times/year, vendor must have a KDA Food Establishment license. Note that a Food Processing License would be required for any WHOLESALE sales."
     },
-    "Alcoholic beverages ( less than 0.5 percent alcohol by volume)": {
+    "Alcoholic beverages (less than 0.5 percent alcohol by volume)": {
       "type": "entry",
       "parent": "Alcoholic",
-      "name": "Alcoholic beverages (more than0.5 percent alcohol by volume)",
+      "name": "Alcoholic beverages (more than 0.5 percent alcohol by volume)",
       "description": "More info to come",
       "examples": "",
       "license": true,
@@ -857,17 +857,17 @@
       "testingRequired": true,
       "regulation": "If the filling is determined to require temperature control based on its water activity, KDA license is required. Otherwise, no license is required."
     },
-    "Powdered sugar or milk Icing with more than65 percent sugar": {
+    "Powdered sugar or milk Icing with more than 65 percent sugar": {
       "type": "entry",
       "parent": "Baked goods (home kitchen)",
-      "name": "Powdered sugar or milk Icing with more than65 percent sugar",
+      "name": "Powdered sugar or milk Icing with more than 65 percent sugar",
       "description": "More info to come",
       "examples": "",
       "license": true,
       "temperatureControl": false,
       "snapEligible": false,
       "testingRequired": true,
-      "regulation": "Often used on cinnamon rolls and similar products. If product is determined to have low water activity, product can be sold without a license. Otherwise, KDA license required. Note that if the Icing with more than65 percent sugar is known to contain more than65 percent sugar, testing and licensing is not needed."
+      "regulation": "Often used on cinnamon rolls and similar products. If product is determined to have low water activity, product can be sold without a license. Otherwise, KDA license required. Note that if the Icing with more than 65 percent sugar is known to contain more than65 percent sugar, testing and licensing is not needed."
     },
     "Bread with cheese baked in or on top": {
       "type": "entry",
