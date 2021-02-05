@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\Components",
     "\\src\\CSS",
     "\\src\\Data",
     "\\src\\Pages"
   ],
+  "SelectedNode": "\\src\\Pages\\SNAPInfoPage.tsx",
   "PreviewInSolutionExplorer": false
 }

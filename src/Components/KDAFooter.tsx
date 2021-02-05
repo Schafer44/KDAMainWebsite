@@ -1,21 +1,7 @@
 import React from "react";
-import { Grid, Typography, Button, TextField, Link, styled} from "@material-ui/core";
+import { Grid, Typography, Link} from "@material-ui/core";
 import "../CSS/KDAFooter.css";
 
-const SignUpButton = styled(Button)({
-    border: 0,
-    borderRadius: 3,
-    height: 48,
-    padding: '0',
-    minWidth: '120px',
-    marginTop: '12px',
-    marginBottom: '12px',
-  });
-
-const MarginTypography = styled(Typography)({
-    marginTop: '12px',
-    marginBottom: '12px'
-})
 
 export default class KDAFooter extends React.Component {
 

@@ -13,12 +13,6 @@ export class ProductBody extends React.Component<
     > {
 
 
-
-    constructor(props: any) {
-        super(props);
-    }
-
-
   //Properties accessed in methods below to store temporary variables
   comment = {
     date: new Date(),

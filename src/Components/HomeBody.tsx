@@ -34,7 +34,7 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
     subcategories: [0],
     url: window.location.pathname,
     star: StarOutlined,
-    starName: "Hello",
+    starName: "",
         starState: true,
         newData: JSON.parse(JSON.stringify(this.props)),
   };
@@ -69,7 +69,6 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
             if (this.comment.newData.data.data[this.comment.parent].type === "entry") {
                 return (
                     <>
-                        <p>HELLO</p>
                         <ProductBody {...this.props}/>
                     </>
                 );
@@ -95,28 +94,6 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
       );
         });
   }
-    /*
-  getStarState(name:string){
-
-    RightData.types.forEach((data) => {
-      if(data.parent === name)
-      {
-        console.log("STAR STATE: "+ data.starState);
-        if(data.starState)
-        {
-          this.comment.starState = true;
-        }
-        else
-        {
-          this.comment.starState = false;
-        }
-      }
-    });
-
-
-    return this.comment.starState;
-  }
-  */
   //Retrieves Header
     getParent(/*num: number*/ currentName: string) {
 
@@ -136,6 +113,6 @@ export class HomeBody extends React.Component<{}, {isToggleOn: boolean}> {
             this.comment.currentName = "Home";
         }
 
-      return this.comment.currentName;                  // change this to go back to original! to currentID
+      return this.comment.currentName;                 
   }
 }

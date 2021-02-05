@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Homepage } from "./Pages/Homepage.tsx";
 import "antd/dist/antd.css";
@@ -9,7 +8,6 @@ import SNAPInfoPage from "./Pages/SNAPInfoPage";
 import FileReportPage from "./Pages/FileReportPage";
 import ReferencePage from "./Pages/ReferencePage";
 import { COERegulationsPage } from "./Pages/COERegulationsPage";
-import ProducePage from "./Pages/ProductTypePage";
 import UpdatesPage from "./Pages/UpdatesPage";
 import AlertsPage from "./Pages/AlertsPage";
 import SearchResultsPage from "./Pages/SearchResultsPage";
@@ -84,24 +82,3 @@ export default class App extends React.Component {
     return (
         );
 }*/
-
-function ReactDefault() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}

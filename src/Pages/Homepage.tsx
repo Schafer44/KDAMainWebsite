@@ -8,10 +8,6 @@ import KDAFooter from "../Components/KDAFooter";
 export class Homepage extends React.Component {
 
 
-    constructor(props: any) {
-        super(props);
-    }
-
     render() {
     return (
         <>
@@ -24,5 +20,3 @@ export class Homepage extends React.Component {
     );
   }
 }
-
-{/*this was above layout {JSON.stringify(this.props)}*/ }
