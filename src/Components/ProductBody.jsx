@@ -4,13 +4,13 @@ import { ProductInfo, ProductTypes } from "../Data/types";
 import { bool } from "prop-types";
 import { RegulationsDisplay } from "./RegulationsDisplay";
 
-interface RegulationsPageProps {}
-interface RegulationsPageState {}
+/*interface RegulationsPageProps {}
+interface RegulationsPageState {}*/
 
-export class ProductBody extends React.Component<
+export class ProductBody extends React.Component/*<
   RegulationsPageProps,
   RegulationsPageState
-    > {
+    > */{
 
 
   //Properties accessed in methods below to store temporary variables
@@ -45,29 +45,27 @@ export class ProductBody extends React.Component<
 
   //Retrieves Header
   getParent() {
-    let par: ProductInfo = {
+    let par = {
       name: "Default",
       category: ProductTypes.Processed,
       description: "Item not Found",
       snap: true,
         regulatoryRequirements: "Default Requirements",
 
-    };
-      let newData = JSON.parse(JSON.stringify(this.props));
-      let lastUrl = this.comment.home.url.split("/").pop();
-      if (lastUrl !== undefined) {
+      };
+      console.log("Test 2" ,this.props);
           par = {
-              name: newData.data.data[lastUrl.replace(/_/g, " ")].name, //!!
-              category: newData.data.data[lastUrl.replace(/_/g, " ")].parent, //!!
-              description: newData.data.data[lastUrl.replace(/_/g, " ")].description, //!!
-              snap: newData.data.data[lastUrl.replace(/_/g, " ")].snapEligible, //!!
-              regulatoryRequirements: newData.data.data[lastUrl.replace(/_/g, " ")].regulation, //!!
-              requiredLicenses: newData.data.data[lastUrl.replace(/_/g, " ")].license, //!!
-              productTesting: newData.data.data[lastUrl.replace(/_/g, " ")].testingRequired, //!!
-              relatedItems: newData.data.data[lastUrl.replace(/_/g, " ")].examples, //!!
-              // Tempurature requirements!!!!!!
-          };
-      }
+              name: this.props.data.name, 
+              category: this.props.data.parents, /*newData.data.data[lastUrl.replace(/_/g, " ")].parent, */
+              description: this.props.data.description, 
+              snap: this.props.data.snapEligible, 
+              regulatoryRequirements: this.props.data.regulation, 
+              requiredLicenses: this.props.data.license, 
+              productTesting: this.props.data.testingRequired, 
+              relatedItems: this.props.data.examples, 
+              // Tempurature requirements!!!!
+      };
+
     return <RegulationsDisplay productProp={par} />;
   }
     getIDName() {

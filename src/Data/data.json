@@ -639,7 +639,7 @@
     "readyToEatCatfish": {
       "type": "entry",
       "parent": "Seafood",
-      "name": "Catfish ready to eat",
+      "name": "Meat, poultry, and catfish ready to eat",
       "description": "More info to come",
       "examples": "",
       "license": true,
