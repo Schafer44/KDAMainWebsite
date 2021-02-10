@@ -33,9 +33,10 @@ const StyledCard = styled(Card)({
 export default class UpdatesBody extends React.Component<{}, UpdatesState> {
     constructor(props: any){
         super(props);
+        console.log(this.props);
         let newData = JSON.parse(JSON.stringify(this.props));
         this.state = {
-            cardsExpanded: new Array<boolean>(Object.values(newData.data.data.updates).length),
+           cardsExpanded: new Array<boolean>(Object.values(newData.data.data.updates).length),
         };
     }
 
@@ -50,10 +51,12 @@ export default class UpdatesBody extends React.Component<{}, UpdatesState> {
     }
 
     render() {
-        let newData = JSON.parse(JSON.stringify(this.props));
-        return (
+        let newData = this.props;
+        console.log("flag 1", this.props);
+        return("");
+        /*return (
             <ScrollableBox>
-                {Object.values(Data.data.updates).map( (update, index) => (
+                {Object.values(newData.data.data.updates).map( (update, index) => (
                     <StyledCard key={index} >
                         <CardHeader title = {update.title} subheader={update.date} className="updateTitle" />
                         <CardContent>
@@ -83,6 +86,6 @@ export default class UpdatesBody extends React.Component<{}, UpdatesState> {
                     </StyledCard>
                 ))}
             </ScrollableBox>
-        );
+        );*/
     }
 }

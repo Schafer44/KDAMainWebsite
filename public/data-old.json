@@ -31,15 +31,15 @@
     "Home": {
       "type":  "category",
       "name": "Home",
-      "children": {
-        "Drinks": "test",
-        "Refrigerated and Frozen Processed Foods": "Refrigerated and Frozen Processed Foods",
-        "Jams, Jellies, and Shelf Stable Food": "Jams, Jellies, and Shelf Stable Food",
-        "Meats, Eggs (less than 250 hens), Dairy Products, and Seafood": "Meats, Eggs (less than 250 hens), Dairy Products, and Seafood",
-        "Other Food Products": "Other Food Products",
-        "Fresh Produce": "Fresh Produce",
-        "Prepared Foods": "Prepared Foods"
-      },
+      "children": [
+        "Drinks",
+        "Refrigerated and Frozen Processed Foods",
+        "Jams, Jellies, and Shelf Stable Food",
+        "Meats, Eggs (less than 250 hens), Dairy Products, and Seafood",
+        "Other Food Products",
+        "Fresh Produce",
+        "Prepared Foods"
+      ],
       "parent": "All"
     },
     "Drinks": {

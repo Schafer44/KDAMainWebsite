@@ -5,7 +5,7 @@ import { Layout } from "antd";
 import KDANavbar from "../Components/KDANavbar";
 import KDAFooter from "../Components/KDAFooter";
 
-export class Homepage extends React.Component {
+export class Homepage extends React.Component<{ data: object }> {
     state = {
         theme: "dark",
         current: "1",
@@ -23,7 +23,7 @@ export class Homepage extends React.Component {
             <>
                 <Layout>
                     <KDANavbar />
-                    <HomeBody />
+                    <HomeBody data = {this.props.data}/>
                     <KDAFooter />
                 </Layout>
             </>

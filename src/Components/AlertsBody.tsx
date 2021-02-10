@@ -51,7 +51,8 @@ export default class AlertsBody extends React.Component<{}, UpdatesState> {
 
     render() {
         let newData = JSON.parse(JSON.stringify(this.props));
-        return (
+        return ("");
+        /*return (
             <ScrollableBox>
                 {Object.values(Data.data.alerts).map((update, index) => (
                     <StyledCard key={index} >
@@ -83,6 +84,6 @@ export default class AlertsBody extends React.Component<{}, UpdatesState> {
                     </StyledCard>
                 ))}
             </ScrollableBox>
-        );
+        );*/
     }
 }

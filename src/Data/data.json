@@ -133,9 +133,9 @@
       "type": "category",
       "name": "Alcoholic",
       "parent": "drinks",
-      "children": [
-        "alcoholicBeverages"
-      ]
+      "children": {
+        "alcoholicBeverages": "Alcoholic beverages"
+      }
     },
     "Non-Alcoholic": {
       "type": "category",

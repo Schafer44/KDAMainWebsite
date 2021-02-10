@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Homepage } from "./Pages/Homepage.tsx";
+import { Homepage } from "./Pages/Homepage";
 import "antd/dist/antd.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
@@ -18,17 +18,14 @@ export default class App extends React.Component {
         this.state = {loaded: false}
     }
     componentDidMount() {
-        fetch("data.json").then(data => data.json()).then(data => this.setState({ loaded: true, data: data }));
         if (!this.state.loaded)
             {
-                fetch("/data.json").then(data => data.json()).then(data => this.setState({ loaded: true, data: data }));
+                fetch("/data.json").then(data => data.json()).then(data => this.setState({ loaded: true, info: data }));
             }
     }
     render(){
         if (!this.state.loaded)
             return "loading...";
-        
-
         return (
             <>
                 <Router>
@@ -36,14 +33,11 @@ export default class App extends React.Component {
                         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                         <Switch>
-                            <Route exact path="/">
-                                <Homepage data={this.state.data} />
-                             </Route>
                             <Route path="/about">
                                 <AboutPage />
                             </Route>
                             <Route path="/reactdefault">
-                                <Homepage data={this.state.data} />
+                                <Homepage data={this.state.info.data} />
                             </Route>
                             <Route path="/snapInfo">
                                 <SNAPInfoPage />
@@ -61,14 +55,19 @@ export default class App extends React.Component {
                                 <SearchResultsPage />
                             </Route>
                             <Route path="/updates">
-                                <UpdatesPage data={this.state.data}/>
+                                <UpdatesPage updates={this.state.info.updates}/>
                             </Route>
                             <Route path="/Alerts">
-                                <AlertsPage data={this.state.data}/>
+                                <AlertsPage data={this.state.info.alerts}/>
                             </Route>
-                            <Route path="/:id">
-                                <Homepage data={this.state.data} />
-                            </Route>
+                            <Route path="/:id" render={({ match }) => {
+                                console.log(match);
+                                return <Homepage name={match.params.id} data={this.state.info.data[match.params.id]} />
+                            }} />
+                            <Route path="/" exact render={({ match }) => {
+                                console.log(match);
+                                return <Homepage name="Home" data={this.state.info.data["Home"]} />
+                            }} />
                         </Switch>
                     </div>
                 </Router>

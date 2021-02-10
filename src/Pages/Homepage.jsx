@@ -13,7 +13,7 @@ export class Homepage extends React.Component {
         <>
         <Layout>
           <KDANavbar />
-                <HomeBody {...this.props}/>
+                <HomeBody  {...this.props}/>
           <KDAFooter />
         </Layout>
       </>
