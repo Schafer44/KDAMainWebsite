@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/Homepage.css";
-import { ProductInfo, ProductTypes } from "../Data/types";
+import { ProductTypes } from "../Data/types";
 import { bool } from "prop-types";
 import { RegulationsDisplay } from "./RegulationsDisplay";
 
@@ -56,7 +56,7 @@ export class ProductBody extends React.Component/*<
       console.log("Test 2" ,this.props);
           par = {
               name: this.props.data.name, 
-              category: this.props.data.parents, /*newData.data.data[lastUrl.replace(/_/g, " ")].parent, */
+              category: this.props.data.parents, /*newData.data.data[lastUrl.replace(/_/g, " ")].parent, what it looked like incase*/
               description: this.props.data.description, 
               snap: this.props.data.snapEligible, 
               regulatoryRequirements: this.props.data.regulation, 
@@ -67,17 +67,5 @@ export class ProductBody extends React.Component/*<
       };
 
     return <RegulationsDisplay productProp={par} />;
-  }
-    getIDName() {
-        let newData = JSON.parse(JSON.stringify(this.props));
-    let lastUrl = this.comment.home.url.split("/").pop();
-      if (lastUrl !== undefined) {
-          this.comment.parent = newData.data.data[lastUrl].name;
-          this.comment.currentName = newData.data.data[lastUrl].name;
-      }
-    if (lastUrl) {
-      return (this.comment.parent = lastUrl.toUpperCase());
-    }
-    return this.comment.parent;
   }
 }

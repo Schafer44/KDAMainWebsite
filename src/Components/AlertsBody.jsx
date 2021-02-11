@@ -9,12 +9,9 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from "@material-ui/core/IconButton";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Typography, Box } from '@material-ui/core';
-import "../CSS/UpdatesBody.css";
-import Data from "../Data/data.json";
+import "../CSS/AlertsBody.css";
 
-interface UpdatesState {
-    cardsExpanded: boolean[],
-}
+
 const ScrollableBox = styled(Box)({
     display: 'flex',
     flexWrap: 'wrap',
@@ -30,17 +27,16 @@ const StyledCard = styled(Card)({
     margin: ".5em",
 });
 
-export default class UpdatesBody extends React.Component<{}, UpdatesState> {
-    constructor(props: any){
+export default class AlertsBody extends React.Component {
+    constructor(props){
         super(props);
         console.log(this.props);
-        let newData = JSON.parse(JSON.stringify(this.props));
         this.state = {
-           cardsExpanded: new Array<boolean>(Object.values(newData.data.data.updates).length),
+            cardsExpanded: new Array(Object.values(this.props.alerts).length),
         };
     }
 
-    handleExpandClick(index: any) {
+    handleExpandClick(index) {
         this.setState(state =>  {
             const cardsExpanded = state.cardsExpanded.map(card => card);
             cardsExpanded[index] = !cardsExpanded[index];
@@ -51,12 +47,9 @@ export default class UpdatesBody extends React.Component<{}, UpdatesState> {
     }
 
     render() {
-        let newData = this.props;
-        console.log("flag 1", this.props);
-        return("");
-        /*return (
+        return (
             <ScrollableBox>
-                {Object.values(newData.data.data.updates).map( (update, index) => (
+                {Object.values(this.props.alerts).map((update, index) => (
                     <StyledCard key={index} >
                         <CardHeader title = {update.title} subheader={update.date} className="updateTitle" />
                         <CardContent>
@@ -86,6 +79,6 @@ export default class UpdatesBody extends React.Component<{}, UpdatesState> {
                     </StyledCard>
                 ))}
             </ScrollableBox>
-        );*/
+        );
     }
 }

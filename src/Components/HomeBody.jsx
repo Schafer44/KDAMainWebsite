@@ -7,7 +7,6 @@ import RightData from "../Data/FoodCategories.json";
 import Data from "../Data/data.json";
 */
 import { ProductBody } from "./ProductBody";
-import { StarOutlined } from '@ant-design/icons';
 //import { useHistory } from "react-router-dom";
 import {Link} from "react-router-dom";
 
@@ -21,7 +20,6 @@ export class HomeBody extends React.Component{
   constructor(props){
     super(props);
     this.state = {isToggleOn: true};
-    this.changerStar = this.changerStar.bind(this);
   }
   //Renders display
     render() {
@@ -35,18 +33,6 @@ console.log(this.props);
           <div className="divide divideBottom"></div>
         </>
     );
-  }
-
-  changerStar(name) {
-      this.setState(prevState => ({
-          //isToggleOn: !prevState.isToggleOn
-      }));
-        console.log("Current Name:" + name);
-        this.props.data[this.comment.parent].forEach((data) => {
-        if (data.parent === name) {
-              data.starState = !data.starState;
-          }
-      })
   }
 
     renderButtons() {

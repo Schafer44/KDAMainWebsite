@@ -58,7 +58,7 @@ export default class App extends React.Component {
                                 <UpdatesPage updates={this.state.info.updates}/>
                             </Route>
                             <Route path="/Alerts">
-                                <AlertsPage data={this.state.info.alerts}/>
+                                <AlertsPage alerts={this.state.info.alerts}/>
                             </Route>
                             <Route path="/:id" render={({ match }) => {
                                 console.log(match);
