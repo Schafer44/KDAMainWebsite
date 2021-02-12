@@ -28,14 +28,14 @@ console.log(this.props);
         </>
     );
   }
-
+  //Renders Buttons and redirects to ProductBody if user selected an entry
     renderButtons() {
         if (this.props.data.type === "entry") {
             return (
                 <ProductBody {...this.props}/>
             );
         }
-
+		//maps out all the children of selected item
         return Object.keys(this.props.data.children).map((key) => {
             return (
                 <Button className="buttons" type="primary" shape="round">

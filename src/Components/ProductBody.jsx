@@ -48,6 +48,7 @@ export class ProductBody extends React.Component{
         regulatoryRequirements: "Default Requirements",
 
       };
+      //creating a object for use in RegulationsDisplay
       console.log("Test 2" ,this.props.data);
           par = {
               name: this.props.data.name, 

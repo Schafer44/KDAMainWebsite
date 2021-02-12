@@ -34,7 +34,7 @@ export default class UpdatesBody extends React.Component {
             cardsExpanded: new Array(Object.values(this.props.updates).length),
         };
     }
-
+    //Expands Boxes when clicked
     handleExpandClick(index) {
         this.setState(state =>  {
             const cardsExpanded = state.cardsExpanded.map(card => card);
@@ -44,7 +44,7 @@ export default class UpdatesBody extends React.Component {
             };
         });
     }
-
+    //Renders page upon open
     render() {
         return (
             <ScrollableBox>

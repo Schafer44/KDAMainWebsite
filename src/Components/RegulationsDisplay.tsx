@@ -21,7 +21,8 @@ export class RegulationsDisplay extends React.Component<
     };
   }
 
-  render() {
+    render() {
+      // HTML for the actual Product information.
     return (
       <>
             <h2>

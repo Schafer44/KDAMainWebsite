@@ -32,6 +32,7 @@ export class SearchBody extends React.Component {
             </>
         );
     }
+    //sends the user to ProductBody upon clicking a searched item
     redierct(key) {
         return (<ProductBody {...key} />);
     }

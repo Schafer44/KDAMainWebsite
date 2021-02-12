@@ -21,6 +21,7 @@ export default class App extends React.Component {
         this.state = {loaded: false}
     }
     componentDidMount() {
+        //Fetches data.json to be sent to all futrue pages that may need the data.
         if (!this.state.loaded)
             {
                 fetch("/data.json").then(data => data.json()).then(data => this.setState({ loaded: true, info: data }));
@@ -82,9 +83,3 @@ export default class App extends React.Component {
         );
     }
 }
-
-/*function subCat() {
-    let { path, url } = useRouteMatch();
-    return (
-        );
-}*/
