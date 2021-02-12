@@ -1,30 +1,18 @@
 {
   "updates": {
-    "SAMPLE UPDATE 1": {
-      "title": "SAMPLE UPDATE 1",
-      "preview": "Short preview of update 1",
-      "description": "Long description of update 1",
-      "date": "(\"08-30-2020\")"
-    },
-    "SAMPLE UPDATE 2": {
-      "title": "SAMPLE UPDATE 2",
-      "preview": "Short preview of uodate 2",
-      "description": "Long description of update 2",
-      "date": "(\"09-01-2020\")"
+    "No Updates Yet": {
+      "title": "No Updates Yet",
+      "preview": "No Updates Yet",
+      "description": "Since this is a newly released app there have been no updates.",
+      "date": "(\"02-8-2021\")"
     }
   },
   "alerts": {
-    "SAMPLE ALERT 1": {
-      "title": "SAMPLE ALERT 1",
-      "preview": "Short preview of alert 1",
-      "description": "Long description of alert 1",
-      "date": "(\"08-30-2020\")"
-    },
-    "SAMPLE ALERT 2": {
-      "title": "SAMPLE ALERT 2",
-      "preview": "Short preview of alert 2",
-      "description": "Long description of alert 2",
-      "date": "(\"09-01-2020\")"
+    "Covid Alert": {
+      "title": "Covid Alert",
+      "preview": "Covid Rules Alert",
+      "description": "Facemasks are required at all Farmers markets across Kansas",
+      "date": "(\"02-8-2021\")"
     }
   },
   "data": {
@@ -66,7 +54,7 @@
       "name": "Jams, Jellies, and Shelf Stable Food",
       "children": {
         "JamsAndJellies": "Jams And Jellies",
-        "ShelfStableFood":"Shelf Stable Food"
+        "ShelfStableFood": "Shelf Stable Food"
       }
     },
     "MeatsEggsDairyProductsSeafood": {
@@ -75,8 +63,8 @@
       "name": "Meats, Eggs, Dairy Products, and Seafood",
       "children": {
         "Meat": "Meat",
-        "Eggs": "Eggs",
-        "DairyProducts": "Dairy Products",
+        "eggs": "Eggs",
+        "dairyProducts": "Dairy Products",
         "Seafood": "Seafood"
       }
     },
@@ -95,7 +83,8 @@
         "samplingOfFoodProducts": "Sampling of food products",
         "foodsAndBeveragesPreparedOffSite": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
         "homemadeMustard": "Homemade mustard",
-        "bakedGoods": "Baked goods (home kitchen)"
+        "bakedGoods": "Baked goods (home kitchen)",
+        "ProductsSafetyDippedInOrDecoratedWithCommerciallyPreparedMeltingChocolate": "Products not requiring refrigeration for safety dipped in or decorated with commercially prepared melting chocolate"
       }
     },
     "FreshProduce": {
@@ -162,7 +151,8 @@
       "name": "Meat",
       "children": {
         "poultry": "Poultry",
-        "broths": "Broths"
+        "broths": "Broths",
+        "UninspectedMeatOrPoultry": "Uninspected meat or poultry"
       }
     },
     "Seafood": {
@@ -189,7 +179,8 @@
         "herbFlavoredInfusedVinegars": "Herb flavored/infused vinegars",
         "infusedOils": "Infused oils",
         "salsa": "Salsa",
-        "herbInfusedSimpleSyrups": "Herb infused simple syrups, elderberry and other fruit syrups"
+        "herbInfusedSimpleSyrups": "Herb infused simple syrups, elderberry and other fruit syrups",
+        "homeCannedPicklesMeatsAndVegetables": "Home canned pickles, meats, and vegetables"
       }
     },
     "bakedGoods": {
@@ -306,11 +297,11 @@
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "Growers raising fewer than 1,000 birds/year can slaughter and sell direct to consumer their own birds at their own facility without registration or inspection. Growers selling 1,001 to 20,000 birds/year must register their exemption from inspection with KDA (at no cost). More details available in https://agriculture.ks.gov/docs/default source/rc meat and poultry/mp 19 m p registration application.pdf"
+      "regulation": "Growers raising fewer than 1,000 birds/year can slaughter and sell direct to consumer their own birds at their own facility without registration or inspection. Growers selling 1,001 to 20,000 birds/year must obtain a KDA Meat & Poultry Wholesaler license with a poultry exemption. The cost of a license is $25 per calendar year. More details available in https://agriculture.ks.gov/docs/default-source/meat-and-poultry/poultry-exemption-5-1-19.pdf?sfvrsn=43488bc1_4"
     },
     "eggs": {
       "type": "entry",
-      "parent": "Eggs",
+      "parent": "MeatsEggsDairyProductsSeafood",
       "name": "Eggs (< 250 hens)",
       "description": "",
       "examples": "Chicken/duck/goose/turkey, etc.",
@@ -347,14 +338,14 @@
     "cannedShelfStableNaturallyHighAcidFoods": {
       "type": "entry",
       "parent": "ShelfStableFood",
-      "name": "Canned, shelf stable naturally high acid foods (and formulated acid foods)",
+      "name": "Canned, shelf stable naturally high acid foods",
       "description": "More info to come",
       "examples": "",
       "license": "Is not required",
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "Must follow labeling requirements. Requirements for other canned foods listed below. More information on FDAs classification of canned foods, including (formulated acid) foods is available from: https://www.fda.gov/food/guidanceregulation/guidancedocumentsregulatoryinformation/acidifiedlacf/default.htm"
+      "regulation": "Must follow labeling requirements. Requirements for other canned foods listed below. "
     },
     "candies": {
       "type": "entry",
@@ -574,8 +565,8 @@
     },
     "dairyProducts": {
       "type": "entry",
-      "parent": "DairyProducts",
-      "name": "Dairy products; milk",
+      "parent": "MeatsEggsDairyProductsSeafood",
+      "name": "Dairy products milk",
       "description": "More info to come",
       "examples": "",
       "license": "Is required",
@@ -592,7 +583,7 @@
       "description": "More info to come",
       "examples": "",
       "license": "Is required",
-      "temperatureControl": "Is not required",
+      "temperatureControl": "Is required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
       "regulation": "Food establishment license required at production facility and point of sale. "
@@ -620,7 +611,7 @@
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "Product must be processed at an inspected facility and properly labeled. Food establishment license required at point of sale unless registered as a wholesale dealer. May be sold refrigerated or frozen. Note that these products require KDA Meat and Poultry inspection for wholesale (for further distribution) sales."
+      "regulation": "Product must be processed at a fully inspected facility, pre-packaged and properly labeled. A KDA Meat & Poultry Wholesale license must be obtained before any product is sold, regardless if the target audience is the end consumer or a wholesale account.  Product may be sold refrigerated or frozen solid."
 
     },
     "readyToEatCatfish": {
@@ -912,6 +903,45 @@
       "snapEligible": "Is not required",
       "testingRequired": "Is required",
       "regulation": "If product is determined to be a low water activity food, no license is required. Otherwise, KDA license is required."
+    },
+
+
+
+    "homeCannedPicklesMeatsAndVegetables": {
+      "type": "entry",
+      "parent": "Shelf Stable Food",
+      "name": "Home canned pickles, meats, and vegetables",
+      "description": "",
+      "examples": "",
+      "license": "Is required",
+      "temperatureControl": "Is not required",
+      "snapEligible": "Is not required",
+      "testingRequired": "Is not required",
+      "regulation": ""
+    },
+    "UninspectedMeatOrPoultry": {
+      "type": "entry",
+      "parent": "Meat",
+      "name": "Uninspected meat or poultry",
+      "description": "",
+      "examples": "",
+      "license": "Is required",
+      "temperatureControl": "Is not required",
+      "snapEligible": "Is not required",
+      "testingRequired": "Is not required",
+      "regulation": "Must be processed at an inspected facility; note the poultry exemption indicated in the table that begins on page 2."
+    },
+    "ProductsSafetyDippedInOrDecoratedWithCommerciallyPreparedMeltingChocolate": {
+      "type": "entry",
+      "parent": "OtherFoodProducts",
+      "name": "Products not requiring refrigeration for safety dipped in or decorated with commercially prepared melting chocolate",
+      "description": "More info to come",
+      "examples": "",
+      "license": "Is not required",
+      "temperatureControl": "Is not required",
+      "snapEligible": "Is not required",
+      "testingRequired": "Is not required",
+      "regulation": "Note: homemade chocolates must be tested to determine if license is needed (see testing table on page 5)."
     }
   }
 }
