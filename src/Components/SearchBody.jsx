@@ -1,18 +1,10 @@
 import React from "react";
 import "../CSS/Homepage.css";
-import { ProductInfo, ProductTypes } from "../Data/types";
-import { bool } from "prop-types";
-import { RegulationsDisplay } from "./RegulationsDisplay";
-import { Button } from "antd";
 import { Link } from "react-router-dom";
 import { ProductBody } from "./ProductBody";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Redirect } from 'react-router';
 
 export class SearchBody extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    
 
 
     render() {

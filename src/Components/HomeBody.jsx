@@ -1,13 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import "../CSS/Homepage.css";
-//import Data from "../Data/FoodType.json";
-/*
-import RightData from "../Data/FoodCategories.json";
-import Data from "../Data/data.json";
-*/
 import { ProductBody } from "./ProductBody";
-//import { useHistory } from "react-router-dom";
 import {Link} from "react-router-dom";
 
 //<button onClick={() => useHistory().goBack()}>Back</button>

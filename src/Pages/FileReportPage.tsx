@@ -2,8 +2,6 @@ import React from "react";
 import { Grid, Typography, Link, Box } from "@material-ui/core";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-import KDANavbar from "../Components/KDANavbar";
-import KDAFooter from "../Components/KDAFooter";
 import "../CSS/FileReportPage.css";
 
 

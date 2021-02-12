@@ -4,13 +4,8 @@ import { ProductTypes } from "../Data/types";
 import { bool } from "prop-types";
 import { RegulationsDisplay } from "./RegulationsDisplay";
 
-/*interface RegulationsPageProps {}
-interface RegulationsPageState {}*/
 
-export class ProductBody extends React.Component/*<
-  RegulationsPageProps,
-  RegulationsPageState
-    > */{
+export class ProductBody extends React.Component{
 
 
   //Properties accessed in methods below to store temporary variables
@@ -56,7 +51,7 @@ export class ProductBody extends React.Component/*<
       console.log("Test 2" ,this.props.data);
           par = {
               name: this.props.data.name, 
-              category: this.props.data.parents, /*newData.data.data[lastUrl.replace(/_/g, " ")].parent, what it looked like incase*/
+              category: this.props.data.parents, 
               description: this.props.data.description, 
               snap: this.props.data.snapEligible, 
               regulatoryRequirements: this.props.data.regulation, 
