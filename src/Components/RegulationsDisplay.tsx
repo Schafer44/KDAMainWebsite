@@ -70,6 +70,16 @@ export class RegulationsDisplay extends React.Component<
                     ? this.state.productInformation.productTesting.toString()
                     : "None Required"}
             </p>
+            <br>
+            </br>
+            <h2>
+                <b>Tempurature Control</b>
+            </h2>
+            <p>
+                {this.state.productInformation.tempuratureControl
+                    ? this.state.productInformation.tempuratureControl.toString()
+                    : "None Required"}
+            </p>
         <br />
       </>
     );

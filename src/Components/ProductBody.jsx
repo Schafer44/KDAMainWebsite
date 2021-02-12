@@ -58,7 +58,7 @@ export class ProductBody extends React.Component{
               requiredLicenses: this.props.data.license, 
               productTesting: this.props.data.testingRequired, 
               relatedItems: this.props.data.examples, 
-              // Tempurature requirements!!!!
+              tempuratureControl: this.props.data.temperatureControl, // Tempurature requirements!!!!
       };
 
     return <RegulationsDisplay productProp={par} />;
