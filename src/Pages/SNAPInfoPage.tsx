@@ -7,9 +7,7 @@ export default class SNAPInfoPage extends React.Component {
   render() {
     return (
       <>
-          <KDANavbar />
           <p>About Page</p>
-          <KDAFooter />
       </>
     );
   }

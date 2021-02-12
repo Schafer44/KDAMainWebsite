@@ -8,9 +8,7 @@ export default class ReferencePage extends React.Component {
     render() {
         return (
             <>
-            <KDANavbar />
             <ReferenceBody />
-            <KDAFooter />
             </>
         );
     }

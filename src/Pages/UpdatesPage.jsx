@@ -10,9 +10,7 @@ export default class UpdatesPage extends React.Component {
     return (
       <>
         <Layout>
-          <KDANavbar />
                 <UpdatesBody  {...this.props}/>
-          <KDAFooter />
         </Layout>
       </>
     );

@@ -15,7 +15,6 @@ export class COERegulationsPage extends React.Component<
   render() {
     return (
       <>
-        <KDANavbar />
         <Grid
           container
           direction="row"
@@ -27,7 +26,6 @@ export class COERegulationsPage extends React.Component<
             <CNIRegulationForm />
           </Grid>
         </Grid>
-        <KDAFooter />
       </>
     );
   }

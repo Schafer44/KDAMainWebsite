@@ -53,7 +53,7 @@ export class ProductBody extends React.Component/*<
         regulatoryRequirements: "Default Requirements",
 
       };
-      console.log("Test 2" ,this.props);
+      console.log("Test 2" ,this.props.data);
           par = {
               name: this.props.data.name, 
               category: this.props.data.parents, /*newData.data.data[lastUrl.replace(/_/g, " ")].parent, what it looked like incase*/

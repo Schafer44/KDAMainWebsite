@@ -12,6 +12,9 @@ import UpdatesPage from "./Pages/UpdatesPage";
 import AlertsPage from "./Pages/AlertsPage";
 import SearchResultsPage from "./Pages/SearchResultsPage";
 
+import KDANavbar from "./Components/KDANavbar";
+import KDAFooter from "./Components/KDAFooter";
+
 export default class App extends React.Component {
     constructor(params){
         super(params);
@@ -29,7 +32,8 @@ export default class App extends React.Component {
         return (
             <>
                 <Router>
-                    <div>
+
+                        <KDANavbar data={this.state.info.data}>
                         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                         <Switch>
@@ -69,7 +73,10 @@ export default class App extends React.Component {
                                 return <Homepage name="Home" data={this.state.info.data["Home"]} />
                             }} />
                         </Switch>
-                    </div>
+                        
+                    </KDANavbar>
+                    <KDAFooter>
+                    </KDAFooter>
                 </Router>
             </>
         );

@@ -7,9 +7,7 @@ export default class AboutPage extends React.Component {
   render() {
     return (
       <>
-          <KDANavbar />
           <p>About Page</p>
-          <KDAFooter />
       </>
     );
   }

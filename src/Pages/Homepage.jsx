@@ -12,9 +12,7 @@ export class Homepage extends React.Component {
     return (
         <>
         <Layout>
-          <KDANavbar />
                 <HomeBody  {...this.props}/>
-          <KDAFooter />
         </Layout>
       </>
     );

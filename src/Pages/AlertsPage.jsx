@@ -10,9 +10,7 @@ export default class AlertsPage extends React.Component {
     return (
       <>
         <Layout>
-          <KDANavbar />
                 <AlertsBody {...this.props}/>
-          <KDAFooter />
         </Layout>
       </>
     );

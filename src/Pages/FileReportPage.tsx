@@ -11,7 +11,6 @@ export default class FileReportPage extends React.Component {
     render() {
         return (
                 <Layout>
-                    <KDANavbar />
                     <br/>
                     <Grid container direction="row" alignItems="center" justify="center" spacing={2}>
                         <Grid item xs={12}>
@@ -61,7 +60,6 @@ export default class FileReportPage extends React.Component {
                         </Grid>
                     </Grid>
                     <br/>
-                    <KDAFooter />
                 </Layout>
         );
     }

@@ -53,7 +53,6 @@ export default class SearchResultsPage extends React.Component<
     render() {
         return (
                 <Layout>
-                    <KDANavbar />
                     <Grid container direction="column" className="results">
                         <Grid item className="resultsTitle">
                             <Typography variant="h4" className="resultsTitleText"> Search Results </Typography>
@@ -73,7 +72,6 @@ export default class SearchResultsPage extends React.Component<
                         </Grid>
                    
                     </Grid>
-                    <KDAFooter />
                 </Layout>
         );
     }

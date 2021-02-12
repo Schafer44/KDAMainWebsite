@@ -8,9 +8,7 @@ export default class ProducePage extends React.Component {
     render() {
         return (
             <>
-                <KDANavbar />
                 <ProductBody/>
-                <KDAFooter />
             </>
         );
     }
