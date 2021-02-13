@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\Components",
     "\\src\\CSS",
+    "\\src\\Data",
     "\\src\\Pages"
   ],
-  "SelectedNode": "\\src\\Components\\HomeBody.tsx",
+  "SelectedNode": "\\src\\Pages\\AlertsPage.jsx",
   "PreviewInSolutionExplorer": false
 }

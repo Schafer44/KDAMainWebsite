@@ -47,5 +47,13 @@
   "devDependencies": {
     "@typescript-eslint/parser": "^2.34.0",
     "eslint-plugin-react-hooks": "^1.7.0"
-  }
+  },
+  "description": "Need to follow the path from src to the item being manipulated. Do not edit items out of the scope of the current branch. KDANavbar should not have to edit the KDAFooter for example.</br>\r Branch name should go as follows: FileInSRC-NextFileNameIfTherIsOne-FinalFileNameWithoutExtension</br>\r File a new Pull Request once you have completed the changes in your branch and merge into master after a reviewer approves the edits.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.cs.ksu.edu/extension-developers/farmers-market-react.git"
+  },
+  "author": "",
+  "license": "ISC"
 }

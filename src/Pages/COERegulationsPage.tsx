@@ -1,7 +1,5 @@
 import React from "react";
 import "antd/dist/antd.css";
-import KDANavbar from "../Components/KDANavbar";
-import KDAFooter from "../Components/KDAFooter";
 import { Grid } from "@material-ui/core";
 import CNIRegulationForm from "../Components/CreateNewItemRegulationForm";
 
@@ -15,7 +13,6 @@ export class COERegulationsPage extends React.Component<
   render() {
     return (
       <>
-        <KDANavbar />
         <Grid
           container
           direction="row"
@@ -27,7 +24,6 @@ export class COERegulationsPage extends React.Component<
             <CNIRegulationForm />
           </Grid>
         </Grid>
-        <KDAFooter />
       </>
     );
   }

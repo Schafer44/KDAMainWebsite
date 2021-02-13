@@ -39,6 +39,7 @@ export interface ProductInfo {
     productTesting?: ProductTesting[],
     relatedItems?: string[],
     imageURL?: string,
+    tempuratureControl?: string,
 }
 
 export interface ProductList {

@@ -2,8 +2,6 @@ import React from "react";
 import { Typography, Grid, Divider, List } from "@material-ui/core";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-import KDANavbar from "../Components/KDANavbar";
-import KDAFooter from "../Components/KDAFooter";
 import { ProductList } from "../Data/types";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -53,7 +51,6 @@ export default class SearchResultsPage extends React.Component<
     render() {
         return (
                 <Layout>
-                    <KDANavbar />
                     <Grid container direction="column" className="results">
                         <Grid item className="resultsTitle">
                             <Typography variant="h4" className="resultsTitleText"> Search Results </Typography>
@@ -73,7 +70,6 @@ export default class SearchResultsPage extends React.Component<
                         </Grid>
                    
                     </Grid>
-                    <KDAFooter />
                 </Layout>
         );
     }

@@ -2,10 +2,8 @@ import React from "react";
 import "antd/dist/antd.css";
 import { HomeBody } from "../Components/HomeBody";
 import { Layout } from "antd";
-import KDANavbar from "../Components/KDANavbar";
-import KDAFooter from "../Components/KDAFooter";
 
-export class Homepage extends React.Component {
+export class Homepage extends React.Component<{ data: object }> {
     state = {
         theme: "dark",
         current: "1",
@@ -22,9 +20,7 @@ export class Homepage extends React.Component {
         return (
             <>
                 <Layout>
-                    <KDANavbar />
-                    <HomeBody />
-                    <KDAFooter />
+                    <HomeBody data = {this.props.data}/>
                 </Layout>
             </>
         );

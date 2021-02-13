@@ -1,0 +1,21 @@
+h2:before {
+    content: ' ';
+    display: block;
+    border: 10px solid #512888;
+    width: 100%;
+}
+
+h2 {
+    color: white;
+    background-color: #512888
+}
+
+    h2:after {
+        content: ' ';
+        display: block;
+        border: 10px solid #512888;
+        box-shadow: 5px 10px 8px black;
+    }
+
+p {
+}

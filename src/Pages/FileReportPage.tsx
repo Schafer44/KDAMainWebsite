@@ -2,8 +2,6 @@ import React from "react";
 import { Grid, Typography, Link, Box } from "@material-ui/core";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-import KDANavbar from "../Components/KDANavbar";
-import KDAFooter from "../Components/KDAFooter";
 import "../CSS/FileReportPage.css";
 
 
@@ -11,7 +9,6 @@ export default class FileReportPage extends React.Component {
     render() {
         return (
                 <Layout>
-                    <KDANavbar />
                     <br/>
                     <Grid container direction="row" alignItems="center" justify="center" spacing={2}>
                         <Grid item xs={12}>
@@ -61,7 +58,6 @@ export default class FileReportPage extends React.Component {
                         </Grid>
                     </Grid>
                     <br/>
-                    <KDAFooter />
                 </Layout>
         );
     }
