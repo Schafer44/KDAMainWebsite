@@ -8,10 +8,10 @@
     }
   },
   "alerts": {
-    "Covid Alert": {
-      "title": "Covid Alert",
-      "preview": "Covid Rules Alert",
-      "description": "Facemasks are required at all Farmers markets across Kansas",
+    "No alerts given": {
+      "title": "No alerts given",
+      "preview": "\"No alerts given,",
+      "description": "No alerts have been given at this time.",
       "date": "(\"02-8-2021\")"
     }
   },
