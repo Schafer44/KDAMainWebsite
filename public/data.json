@@ -20,33 +20,16 @@
       "type": "category",
       "name": "Home",
       "children": {
-        "Drinks": "Drinks",
-        "RefrigeratedAndFrozenProcessedFoods": "Refrigerated and Frozen Processed Foods",
         "JamsJelliesShelfStableFood": "Jams, Jellies, and Shelf Stable Food",
         "MeatsEggsDairyProductsSeafood": "Meats, Eggs, Dairy Products, and Seafood",
-        "OtherFoodProducts": "Other Food Products",
+        "RefrigeratedAndFrozenProcessedFoods": "Refrigerated and Frozen Processed Foods",
+        "PreparedFoods": "Prepared Foods",
         "FreshProduce": "Fresh Produce",
-        "PreparedFoods": "Prepared Foods"
+        "OtherFoodProducts": "Other Food Products",
+        "Drinks": "Drinks",
+        "SamplingOfFoodProducts": "Sampling of food products"
       },
       "parent": "All"
-    },
-    "Drinks": {
-      "type": "category",
-      "name": "Drinks",
-      "parent": "Home",
-      "children": {
-        "Alcoholic": "Alcoholic",
-        "Non-Alcoholic": "Non-Alcoholic"
-      }
-    },
-    "RefrigeratedAndFrozenProcessedFoods": {
-      "type": "category",
-      "parent": "Home",
-      "name": "Refrigerated and Frozen Processed Foods",
-      "children": {
-        "dough": "Dough",
-        "nonspecializedProcessedFoods": "Non specialized processed food that is made and sold six or fewer days in a year."
-      }
     },
     "JamsJelliesShelfStableFood": {
       "type": "category",
@@ -54,7 +37,8 @@
       "name": "Jams, Jellies, and Shelf Stable Food",
       "children": {
         "JamsAndJellies": "Jams And Jellies",
-        "ShelfStableFood": "Shelf Stable Food"
+        "ShelfStableFood": "Shelf Stable Food",
+        "naturallyFermentedCannedGoods": "Naturally fermented canned foods"
       }
     },
     "MeatsEggsDairyProductsSeafood": {
@@ -68,23 +52,27 @@
         "Seafood": "Seafood"
       }
     },
-    "OtherFoodProducts": {
+    "RefrigeratedAndFrozenProcessedFoods": {
       "type": "category",
-      "name": "Other Food Products",
       "parent": "Home",
+      "name": "Refrigerated and Frozen Processed Foods",
       "children": {
-        "candies": "Candies (made in home kitchen)",
-        "spices": "Spices",
-        "grainProducts": "Grain products",
-        "fruitLeathers": "Fruit leathers",
-        "animalFeedAndTreats": "Animal feed/treats",
-        "chocolateCandies": "Chocolate Candies",
-        "lard": "Lard",
-        "samplingOfFoodProducts": "Sampling of food products",
-        "foodsAndBeveragesPreparedOffSite": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
-        "homemadeMustard": "Homemade mustard",
-        "bakedGoods": "Baked goods (home kitchen)",
-        "ProductsSafetyDippedInOrDecoratedWithCommerciallyPreparedMeltingChocolate": "Products not requiring refrigeration for safety dipped in or decorated with commercially prepared melting chocolate"
+        "dough": "Dough",
+        "nonspecializedProcessedFoods": "Non specialized processed food that is made and sold six or fewer days in a year."
+      }
+    },
+    "PreparedFoods": {
+      "type": "category",
+      "parent": "Home",
+      "name": "Prepared Foods",
+      "children": {
+        "homemadeDriedPasta": "Homemade dried pasta",
+        "dryBakingMixes": "Dry baking mixes",
+        "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
+        "foodsAndBeveragesSoldReadyForImmediateConsumption": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
+        "foodsAndBeveragesSoldReadyForImmediateConsumption2": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
+        "foodsAndBeveragesSoldReadyForImmediateConsumption3": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
+        "vacuumPackedFoods": "Vacuum packaged foods requiring temperature control for safety"
       }
     },
     "FreshProduce": {
@@ -104,19 +92,31 @@
         "roastedVegetables": "Roasted vegetables"
       }
     },
-    "PreparedFoods": {
+    "OtherFoodProducts": {
       "type": "category",
+      "name": "Other Food Products",
       "parent": "Home",
-      "name": "Prepared Foods",
       "children": {
-        "homemadeDriedPasta": "Homemade dried pasta",
-        "dryBakingMixes": "Dry baking mixes",
-        "naturallyFermentedCannedGoods": "Naturally fermented canned foods",
-        "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
-        "foodsAndBeveragesSoldReadyForImmediateConsumption": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
-        "foodsAndBeveragesSoldReadyForImmediateConsumption2": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
-        "foodsAndBeveragesSoldReadyForImmediateConsumption3": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
-        "vacuumPackedFoods": "Vacuum packaged foods requiring temperature control for safety"
+        "candies": "Candies (made in home kitchen)",
+        "spices": "Spices",
+        "grainProducts": "Grain products",
+        "fruitLeathers": "Fruit leathers",
+        "animalFeedAndTreats": "Animal feed/treats",
+        "chocolateCandies": "Chocolate Candies",
+        "lard": "Lard",
+        "foodsAndBeveragesPreparedOffSite": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
+        "homemadeMustard": "Homemade mustard",
+        "bakedGoods": "Baked goods (home kitchen)",
+        "ProductsSafetyDippedInOrDecoratedWithCommerciallyPreparedMeltingChocolate": "Products not requiring refrigeration for safety dipped in or decorated with commercially prepared melting chocolate"
+      }
+    },
+    "Drinks": {
+      "type": "category",
+      "name": "Drinks",
+      "parent": "Home",
+      "children": {
+        "Alcoholic": "Alcoholic",
+        "Non-Alcoholic": "Non-Alcoholic"
       }
     },
     "Alcoholic": {
@@ -550,9 +550,9 @@
       "regulation": "Standard hygiene and sanitation requirements, as with all food sold"
 
     },
-    "samplingOfFoodProducts": {
+    "SamplingOfFoodProducts": {
       "type": "entry",
-      "parent": "OtherFoodProducts",
+      "parent": "Home",
       "name": "Sampling of food products",
       "description": "More info to come",
       "examples": "",
@@ -713,7 +713,7 @@
     },
     "naturallyFermentedCannedGoods": {
       "type": "entry",
-      "parent": "PreparedFoods",
+      "parent": "JamsJelliesShelfStableFood",
       "name": "Naturally fermented canned foods",
       "description": "More info to come",
       "examples": "",
