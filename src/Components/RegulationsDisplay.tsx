@@ -34,7 +34,7 @@ export class RegulationsDisplay extends React.Component<
             <br>
             </br>
             <h2>
-                <b>Regulatory Requirements</b>
+                <b>Regulatory Requirements for Direct-to-Consumer Sales</b>
             </h2>
             <p>
                 {this.state.productInformation.regulatoryRequirements

@@ -58,7 +58,7 @@
       "name": "Refrigerated and Frozen Processed Foods",
       "children": {
         "dough": "Dough",
-        "nonspecializedProcessedFoods": "Non specialized processed food that is made and sold six or fewer days in a year."
+        "nonspecializedProcessedFoods": "Non-specialized processed food that is made and sold six or fewer days in a year."
       }
     },
     "PreparedFoods": {
@@ -115,16 +115,8 @@
       "name": "Drinks",
       "parent": "Home",
       "children": {
-        "Alcoholic": "Alcoholic",
+        "alcoholicBeverages": "Alcoholic beverages",
         "Non-Alcoholic": "Non-Alcoholic"
-      }
-    },
-    "Alcoholic": {
-      "type": "category",
-      "name": "Alcoholic",
-      "parent": "drinks",
-      "children": {
-        "alcoholicBeverages": "Alcoholic beverages"
       }
     },
     "Non-Alcoholic": {
@@ -438,8 +430,8 @@
       "parent": "RefrigeratedAndFrozenProcessedFoods",
       "name": "Non specialized processed food that is made and sold six or fewer days in a year. ",
       "description": "More info to come",
-      "examples": "",
-      "license": "Is not required",
+      "examples": "breakfast burritos, hot dogs, etc",
+      "license": "The food product can be made on day one and each day they are sold adds to the total of up to 6 days without a license.",
       "temperatureControl": "Is required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
@@ -599,7 +591,7 @@
       "temperatureControl": "Is required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "Product requires temperature control for safety, so a food establish-ment license is required. "
+      "regulation": "Product requires temperature control for safety, so a food establishment license is required."
     },
     "rawCatfish": {
       "type": "entry",
@@ -749,7 +741,7 @@
     },
     "alcoholicBeverages": {
       "type": "entry",
-      "parent": "Alcoholic",
+      "parent": "Drinks",
       "name": "Alcoholic beverages (>0.5% alcohol by volume)",
       "description": "More info to come",
       "examples": "",
@@ -799,7 +791,7 @@
     "pepperJamesAndJellies": {
       "type": "entry",
       "parent": "JamsAndJellies",
-      "name": "Pepper jams and jellies (canned, shelf stable, other than those described above as exempt). In cludes jellies made with pepper juice.",
+      "name": "Pepper jams and jellies (canned, shelf stable, other than those described above as exempt). Includes jellies made with pepper juice.",
       "description": "More info to come",
       "examples": "",
       "license": "Read Regulations",
