@@ -133,7 +133,7 @@
       "parent": "JamsJelliesShelfStableFood",
       "children": {
         "homeCannedFruitAndJellies": "Home canned fruit jams and jellies; jams and jellies flavored with pepper flavored vinegar or small amounts of pepper powder",
-        "pepperJamesAndJellies": "Pepper jams and jellies (canned, shelf stable, other than those described above as exempt). In cludes jellies made with pepper juice.",
+        "pepperJamesAndJellies": "Pepper jams and jellies (canned, shelf stable, other than those described above as exempt). includes jellies made with pepper juice.",
         "lowSugarFruitJamsAndJellies": "Low sugar fruit jams and jellies"
       }
     },

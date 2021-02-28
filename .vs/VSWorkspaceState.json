@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.firebase",
     "\\public",
     "\\src",
     "\\src\\Components",
@@ -8,6 +9,6 @@
     "\\src\\Data",
     "\\src\\Pages"
   ],
-  "SelectedNode": "\\public\\data-old.json",
+  "SelectedNode": "\\src\\Components\\AlertsBody.jsx",
   "PreviewInSolutionExplorer": false
 }
