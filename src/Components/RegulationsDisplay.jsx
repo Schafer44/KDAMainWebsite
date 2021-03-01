@@ -1,20 +1,10 @@
 import React from "react";
 import { ProductInfo } from "../Data/types";
 import "../CSS/RegulationsPage.css";
+
 //import { ProductInfo, ProductTypes, TestName } from "../Data/types";
-
-interface RegulationsDisplayProps {
-  productProp: ProductInfo;
-}
-interface RegulationsDisplayState {
-  productInformation: ProductInfo;
-}
-
-export class RegulationsDisplay extends React.Component<
-  RegulationsDisplayProps,
-  RegulationsDisplayState
-> {
-  constructor(props: any) {
+export class RegulationsDisplay extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       productInformation: this.props.productProp,
