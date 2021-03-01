@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, Typography, Link} from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
+import {Link} from "react-router-dom";
 import "../CSS/KDAFooter.css";
-
 
 export default class KDAFooter extends React.Component {
 
@@ -11,11 +11,10 @@ export default class KDAFooter extends React.Component {
                 <Grid item xs={12} sm={4}>
                     <img className="kdaLogo" src="https://upload.wikimedia.org/wikipedia/en/b/bd/KSDofAg_logo.png" alt="Kansas Department of Agriculture" />
                 </Grid>
-                <Grid item container direction="column" alignContent="center" xs={6} sm={4}>
+                <Grid item container direction="column" alignContent="center" xs={6} sm={4} >
                     <Typography variant="h6"> Support </Typography>
-                    <Link color ="inherit" href="/about" > About Us </Link>
-                    <Link color ="inherit" href="/references"> Reference Page </Link>
-                    <Link color ="inherit" href="/report"> File A Report </Link>
+                    <Link color ="inherit" to="/references"> Reference Page </Link>
+                    <Link color ="inherit" to="/report"> File A Report </Link>
                 </Grid>
             </Grid>
         )

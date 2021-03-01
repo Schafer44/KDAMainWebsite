@@ -13,6 +13,7 @@ import {
     Toolbar,
     Paper,
 } from "@material-ui/core";
+import { Link } from 'react-router-dom';
 import MenuIcon from "@material-ui/icons/Menu";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
@@ -81,7 +82,7 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
         console.log("index: ", index);
         switch (index) {
             case 0:
-                return <a href="/search"></a>;
+                return <Link to="/search"></Link>;
             default:
                 break;
         }
@@ -123,7 +124,7 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
             <List>
                 {Object.entries(KDADrawerRoutes).map(
                     ([key, value]) => (
-                        <ListItem button component="a" key={key} href={value}>
+                        <ListItem button component={Link} key={key} to={value}>
                             <ListItemIcon>
                                 {this.menuDrawerIconSelection(key)}
                             </ListItemIcon>
@@ -178,14 +179,14 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
                                 xl
                                 className="centerIcon"
                             >
-                                <a href="/" className="logo">
+                                <Link to="/" className="logo">
                                     <img
                                         src="https://www.communications.k-state.edu/communications-solutions-and-services/logos/KSRE_textonly_REVERSE_CORRECT.png"
                                         placeholder="Logo Here"
                                         alt="Kansas Department of Agriculture Food Regulations"
                                         className="navbarLogo"
                                     />
-                                </a>
+                                </Link>
                             </Grid>
                             <Grid item xs={12} sm={12} md={5} lg xl className="search">
                                 <Paper className="searchPaper" onSubmit={this.onSearch}>

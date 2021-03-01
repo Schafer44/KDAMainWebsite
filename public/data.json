@@ -89,7 +89,8 @@
         "nutsAndNutButters": "Nuts and nut butters",
         "intactSaladGreens": "Intact salad greens (not cut beyond normal harvesting)",
         "certainCutProduce": "Certain cut produce (fresh or dried)",
-        "roastedVegetables": "Roasted vegetables"
+        "roastedVegetables": "Roasted vegetables",
+        "SproutedGrains": "Sprouted grains (fresh or dried/dehydrated)"
       }
     },
     "OtherFoodProducts": {
@@ -102,12 +103,13 @@
         "grainProducts": "Grain products",
         "fruitLeathers": "Fruit leathers",
         "animalFeedAndTreats": "Animal feed/treats",
-        "chocolateCandies": "Chocolate Candies",
+        "chocolateCandies": "Chocolate Candies and meringue cookies",
         "lard": "Lard",
         "foodsAndBeveragesPreparedOffSite": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
         "homemadeMustard": "Homemade mustard",
         "bakedGoods": "Baked goods (home kitchen)",
-        "ProductsSafetyDippedInOrDecoratedWithCommerciallyPreparedMeltingChocolate": "Products not requiring refrigeration for safety dipped in or decorated with commercially prepared melting chocolate"
+        "ProductsSafetyDippedInOrDecoratedWithCommerciallyPreparedMeltingChocolate": "Products not requiring refrigeration for safety dipped in or decorated with commercially prepared melting chocolate",
+        "SCOBY": "Symbiotic culture of bacteria and yeast (SCOBY)"
       }
     },
     "Drinks": {
@@ -115,8 +117,9 @@
       "name": "Drinks",
       "parent": "Home",
       "children": {
-        "alcoholicBeverages": "Alcoholic beverages",
-        "Non-Alcoholic": "Non-Alcoholic"
+        "alcoholicBeverages": "Alcoholic Beverages",
+        "Non-Alcoholic": "Non-Alcoholic",
+        "LooseLeafTeas": "Loose Leaf Teas"
       }
     },
     "Non-Alcoholic": {
@@ -416,7 +419,7 @@
     "foodsAndBeveragesSoldReadyForImmediateConsumption3": {
       "type": "entry",
       "parent": "PreparedFoods",
-      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
+      "name": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
       "description": "More info to come",
       "examples": "",
       "license": "Is required",
@@ -827,7 +830,7 @@
     "chocolateCandies": {
       "type": "entry",
       "parent": "OtherFoodProducts",
-      "name": "Chocolate Candies",
+      "name": "Chocolate Candies and meringue cookies",
       "description": "More info to come",
       "examples": "",
       "license": "Is required",
@@ -934,6 +937,42 @@
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
       "regulation": "Note: homemade chocolates must be tested to determine if license is needed (see testing table on page 5)."
+    },
+    "LooseLeafTeas": {
+      "type": "entry",
+      "parent": "Drinks",
+      "name": "Loose leaf teas",
+      "description": "More info to come",
+      "examples": "",
+      "license": "Is not required",
+      "temperatureControl": "Is not required",
+      "snapEligible": "Is not required",
+      "testingRequired": "Is not required",
+      "regulation": "Product must be labeled properly, unadulterated, and sold in a sanitary manner."
+    },
+    "SproutedGrains": {
+      "type": "entry",
+      "parent": "FreshProduce",
+      "name": "Sprouted grains (fresh or dried/dehydrated)",
+      "description": "More info to come",
+      "examples": "Sprouted buckwheat",
+      "license": "Is required",
+      "temperatureControl": "Is not required",
+      "snapEligible": "Is not required",
+      "testingRequired": "Is not required",
+      "regulation": "KDA Food Establishment License required for production facility."
+    },
+    "SCOBY": {
+      "type": "entry",
+      "parent": "OtherFoodProduct",
+      "name": "Symbiotic culture of bacteria and yeast (SCOBY) ",
+      "description": "More info to come",
+      "examples": "Used for production of kombucha",
+      "license": "Is required",
+      "temperatureControl": "Is not required",
+      "snapEligible": "Is not required",
+      "testingRequired": "Is not required",
+      "regulation": "KDA Food Establishment License required for production facility."
     }
   }
 }
