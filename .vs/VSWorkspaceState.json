@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\.firebase",
+    "\\.idea",
     "\\public",
     "\\src",
     "\\src\\Components",
@@ -9,6 +10,6 @@
     "\\src\\Data",
     "\\src\\Pages"
   ],
-  "SelectedNode": "\\src\\Components\\HomeBody.jsx",
+  "SelectedNode": "\\public",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductInfo } from "../Data/types";
 import "../CSS/RegulationsPage.css";
+import { Link } from "react-router-dom";
 
 //import { ProductInfo, ProductTypes, TestName } from "../Data/types";
 export class RegulationsDisplay extends React.Component {
@@ -31,6 +32,15 @@ export class RegulationsDisplay extends React.Component {
                     ? this.state.productInformation.regulatoryRequirements
                     : "No Requirements"}
             </p>
+            <a href=
+                {this.state.productInformation.URLTesting
+                    ? this.state.productInformation.URLRegulatory
+                    : ""
+                }>{this.state.productInformation.URLTesting
+                    ? this.state.productInformation.URLRegulatory
+                    : ""
+                }
+            </a>
             <br>
             </br>
             <h2>
@@ -61,6 +71,18 @@ export class RegulationsDisplay extends React.Component {
                     ? this.state.productInformation.productTesting.toString()
                     : "None Required"}
             </p>
+            <a href=
+                {this.state.productInformation.URLTesting
+                    ? this.state.productInformation.URLTesting
+                    : ""
+                }>{this.state.productInformation.URLTesting
+                    ? this.state.productInformation.URLTesting
+                    : ""
+                }
+            </a>
+            {
+
+            }
             {/*<br>
             </br>
             <h2>
@@ -73,6 +95,6 @@ export class RegulationsDisplay extends React.Component {
             </p>*/}
         <br />
       </>
-    );
+        );
   }
 }
