@@ -718,8 +718,8 @@
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "KDA Food Establishment License or Food Processors License required for production facility. Requires recipe approval; Better Process Control School (BPCS) required. KDA Meat and Poultry inspection required if canned meat is sold wholesale. Contact Kansas State University Value Added Foods Lab for more information on recipe approval and BPCS: www.ksre.ksu.edu/kvaf",
-      "regulationURL": "www.ksrevenue.org/abcstatutes.html"
+      "regulation": "KDA Food Establishment License or Food Processors License required for production facility. Requires recipe approval; Better Process Control School (BPCS) required. KDA Meat and Poultry inspection required if canned meat is sold wholesale. Contact Kansas State University Value Added Foods Lab for more information on recipe approval and BPCS",
+      "regulationURL": "https://www.ksrevenue.org/abcstatutes.html"
     },
     "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": {
       "type": "entry",
@@ -743,8 +743,8 @@
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "Kansas Dept. of Revenue alcohol licensing requirements. (www.ksrevenue.org/abcstatutes.html)",
-      "regulationURL": "www.ksrevenue.org/abcstatutes.html"
+      "regulation": "Kansas Dept. of Revenue alcohol licensing requirements.",
+      "regulationURL": "https://www.ksrevenue.org/abcstatutes.html"
     },
     "infusedOils": {
       "type": "entry",
@@ -769,7 +769,8 @@
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "Kansas commercial feed license and small pet product application required. Food safety license not required (may be made in a home kitchen). Guaranteed analysis for protein, fat, and fiber, and ingredient statement required on label. (More information available from: \n https://agriculture.ks.gov/divisions programs/dairy inspection/feed safety/feed licenses)"
+      "regulation": "Kansas commercial feed license and small pet product application required. Food safety license not required (may be made in a home kitchen). Guaranteed analysis for protein, fat, and fiber, and ingredient statement required on label. (More information available from: programs/dairy inspection/feed safety/feed licenses)",
+      "regulationURL": "https://agriculture.ks.gov/divisions"
     },
     "broths": {
       "type": "entry",

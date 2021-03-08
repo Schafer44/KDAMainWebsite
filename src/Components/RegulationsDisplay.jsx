@@ -33,10 +33,10 @@ export class RegulationsDisplay extends React.Component {
                     : "No Requirements"}
             </p>
             <a span class="url" href=
-                {this.state.productInformation.URLTesting
+                {this.state.productInformation.URLRegulatory
                     ? this.state.productInformation.URLRegulatory
                     : ""
-                }>{this.state.productInformation.URLTesting
+                }>{this.state.productInformation.URLRegulatory
                     ? this.state.productInformation.URLRegulatory
                     : ""
                 }
