@@ -67,8 +67,7 @@ export default class SearchResultsPage extends React.Component<
                                 </React.Fragment>
                                 )) }
                             </List>
-                        </Grid>
-                   
+                    </Grid>
                     </Grid>
                 </Layout>
         );

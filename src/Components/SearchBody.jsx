@@ -28,7 +28,7 @@ export class SearchBody extends React.Component {
 
 
             <li>
-                <button className="buttons" type="primary" shape="round" onClick={<ProductBody {...key} />}>
+                <button span class="search" className="buttons" type="primary" shape="round" onClick={<ProductBody {...key} />}>
                     <Link to={key} >{this.props.data[key].name}</Link>
                 </button>
             </li>
@@ -39,7 +39,7 @@ export class SearchBody extends React.Component {
                 <button className="buttons" type="primary" shape="round" >
                     <Link to={key} >{this.props.data[key].name}</Link>
                 </button>
-            </li>*/
+            </li> */
 
 
 
@@ -47,6 +47,8 @@ export class SearchBody extends React.Component {
         return (
             <>
                 <div className="divide">{result}</div>
+                <br>
+                </br>
             </>
         );
     }
