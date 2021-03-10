@@ -13,8 +13,8 @@ export default class KDAFooter extends React.Component {
                 </Grid>
                 <Grid item container direction="column" alignContent="center" xs={6} sm={4} >
                     <Typography variant="h6"> Support </Typography>
-                    <Link color ="inherit" to="/references"> Reference Page </Link>
-                    <Link color ="inherit" to="/report"> File A Report </Link>
+                    <Link to="/references" className="link"> Reference Page </Link>
+                    <Link to="/report" className="link"> File A Report </Link>
                 </Grid>
             </Grid>
         )
