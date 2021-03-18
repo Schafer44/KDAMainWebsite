@@ -3,10 +3,7 @@ import "../CSS/Homepage.css";
 import { Link } from "react-router-dom";
 import { ProductBody } from "./ProductBody";
 import { Button } from "antd";
-import { HomeBody } from "./HomeBody";
-import Search from "antd/lib/input/Search";
 import KDANavbar from "./KDANavbar";
-import KDAFooter from "./KDAFooter";
 
 
 
@@ -31,12 +28,13 @@ export class SearchBody extends React.Component {
                 );
             }).map(key => (
                 <Button className="buttons2" type="primary" shape="round">
-                    <Link to={key} >{this.props.data[key].name}</Link>
+                    <Link to={key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
                             {this.props.data[key].examples}
                         </p>
-                    </when>
+                        </when>
+                    </Link>
                 </Button>
             ));
 
@@ -47,18 +45,18 @@ export class SearchBody extends React.Component {
         const result2 = Object.keys(this.props.data).filter(key => {
             return this.props.data[key]
         }).filter(key => {
-            if (this.props.data[key].examples != undefined)
+            if (this.props.data[key].examples !== undefined)
                 return (this.props.data[key].examples.toLowerCase().includes(this.props.search.toLowerCase())
                 );
         }).map(key => (
-
             <Button className="buttons2" type="primary" shape="round">
-                    <Link to={key} >{this.props.data[key].name}</Link>
+                    <Link to={key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
                             {this.props.data[key].examples}
                         </p>
-                    </when>
+                        </when>
+                    </Link>
                 </Button>
             ));
 

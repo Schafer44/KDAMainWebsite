@@ -1,7 +1,5 @@
 import React from "react";
-import { ProductInfo } from "../Data/types";
 import "../CSS/RegulationsPage.css";
-import { Link } from "react-router-dom";
 
 //import { ProductInfo, ProductTypes, TestName } from "../Data/types";
 export class RegulationsDisplay extends React.Component {
