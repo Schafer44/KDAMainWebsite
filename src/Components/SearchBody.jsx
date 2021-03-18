@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { ProductBody } from "./ProductBody";
 import { Button } from "antd";
 import { HomeBody } from "./HomeBody";
+import Search from "antd/lib/input/Search";
+import KDANavbar from "./KDANavbar";
+import KDAFooter from "./KDAFooter";
 
 
 
@@ -27,7 +30,7 @@ export class SearchBody extends React.Component {
             return (this.props.data[key].name.toLowerCase().includes(this.props.search.toLowerCase())
                 );
             }).map(key => (
-                <Button  className="buttons2" type="primary" shape="round" onClick={<ProductBody {...key} />}>
+                <Button className="buttons2" type="primary" shape="round">
                     <Link to={key} >{this.props.data[key].name}</Link>
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
@@ -49,7 +52,7 @@ export class SearchBody extends React.Component {
                 );
         }).map(key => (
 
-                <Button className="buttons2" type="primary" shape="round" onClick={<ProductBody {...key} />}>
+            <Button className="buttons2" type="primary" shape="round">
                     <Link to={key} >{this.props.data[key].name}</Link>
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
@@ -57,8 +60,7 @@ export class SearchBody extends React.Component {
                         </p>
                     </when>
                 </Button>
-            )); 
-
+            ));
 
         return (
             <>
@@ -72,9 +74,11 @@ export class SearchBody extends React.Component {
         );
     }
 
-
-
+  
     redirect(key) {
+        KDANavbar.searchInput = null;
         return <Link to={ProductBody}>{key}</Link>;
+
+        //{< ProductBody {...key} />}>
     }
 }
