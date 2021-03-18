@@ -19,34 +19,53 @@ export class SearchBody extends React.Component {
 
 
         console.log(this.props)
+
+        // returns results pulled from the name category
         const result = Object.keys(this.props.data).filter(key => {
             return this.props.data[key]
         }).filter(key => {
-            return this.props.data[key].name.toLowerCase().includes(this.props.search.toLowerCase())
+            return (this.props.data[key].name.toLowerCase().includes(this.props.search.toLowerCase())
+                );
+            }).map(key => (
+                <Button  className="buttons2" type="primary" shape="round" onClick={<ProductBody {...key} />}>
+                    <Link to={key} >{this.props.data[key].name}</Link>
+                    <when {...this.props.data[key].examples != null}>
+                        <p className="examples">
+                            {this.props.data[key].examples}
+                        </p>
+                    </when>
+                </Button>
+            ));
+
+
+
+
+        // returns results pulled from the Examples category
+        const result2 = Object.keys(this.props.data).filter(key => {
+            return this.props.data[key]
+        }).filter(key => {
+            if (this.props.data[key].examples != undefined)
+                return (this.props.data[key].examples.toLowerCase().includes(this.props.search.toLowerCase())
+                );
         }).map(key => (
 
-
-
-            <li>
-                <button span class="search" className="buttons" type="primary" shape="round" onClick={<ProductBody {...key} />}>
+                <Button className="buttons2" type="primary" shape="round" onClick={<ProductBody {...key} />}>
                     <Link to={key} >{this.props.data[key].name}</Link>
-                </button>
-            </li>
+                    <when {...this.props.data[key].examples != null}>
+                        <p className="examples">
+                            {this.props.data[key].examples}
+                        </p>
+                    </when>
+                </Button>
+            )); 
 
 
-
-           /* <li>
-                <button className="buttons" type="primary" shape="round" >
-                    <Link to={key} >{this.props.data[key].name}</Link>
-                </button>
-            </li> */
-
-
-
-            ));
         return (
             <>
                 <div className="divide">{result}</div>
+                <br>
+                </br>
+                <div className="divide">{result2}</div>
                 <br>
                 </br>
             </>

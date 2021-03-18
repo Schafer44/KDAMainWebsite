@@ -13,10 +13,20 @@
     width: 100%;
 }
 .buttons {
-    width: 75vw;
+    width: 75%;
     align-content: space-evenly;
     margin-top: 5%;
     color:white;
+    background-color: #512888;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+.buttons2 {
+    width: 75%;
+    height: 75px;
+    align-content: space-evenly;
+    margin-top: 5%;
+    color: white;
     background-color: #512888;
     padding-top: 15px;
     padding-bottom: 35px;
@@ -53,4 +63,8 @@ a{
 
 .search{
     color:white;
+}
+
+.examples {
+    color: grey;
 }
