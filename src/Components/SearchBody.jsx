@@ -48,8 +48,8 @@ export class SearchBody extends React.Component {
             if (this.props.data[key].examples !== undefined)
                 return (this.props.data[key].examples.toLowerCase().includes(this.props.search.toLowerCase())
                 );
-        }).map(key => (
-            <Button className="buttons2" type="primary" shape="round">
+            }).map(key => (
+                <Button className="buttons2" type="primary" shape="round">
                     <Link to={key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
@@ -59,7 +59,6 @@ export class SearchBody extends React.Component {
                     </Link>
                 </Button>
             ));
-
         return (
             <>
                 <div className="divide">{result}</div>
@@ -71,8 +70,7 @@ export class SearchBody extends React.Component {
             </>
         );
     }
-
-  
+    
     redirect(key) {
         KDANavbar.searchInput = null;
         return <Link to={ProductBody}>{key}</Link>;

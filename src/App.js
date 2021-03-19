@@ -34,8 +34,7 @@ export default class App extends React.Component {
             <>
                 <Router>
 
-                    <KDANavbar data={this.state.info.data}>
-                    
+                        <KDANavbar data={this.state.info.data}>
                         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                         <Switch>
@@ -75,7 +74,7 @@ export default class App extends React.Component {
                                 return <Homepage name="Home" data={this.state.info.data["Home"]} />
                             }} />
                         </Switch>
-                     
+                        
                     </KDANavbar>
                     <KDAFooter>
                     </KDAFooter>
