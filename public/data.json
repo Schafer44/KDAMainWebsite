@@ -68,9 +68,9 @@
       "children": {
         "homemadeDriedPasta": "Homemade dried pasta",
         "dryBakingMixes": "Dry baking mixes",
-        "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
+        "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
         "foodsAndBeveragesSoldReadyForImmediateConsumption": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
-        "foodsAndBeveragesSoldReadyForImmediateConsumption3": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
+        "foodsAndBeveragesSoldReadyForImmediateConsumption2": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
         "vacuumPackedFoods": "Vacuum packaged foods requiring temperature control for safety"
       }
     },
@@ -405,17 +405,17 @@
       "testingRequired": "Is not required",
       "regulation": "No licensing required; however, must follow (Sanitation and hygiene requirements for exempt food establishments). Fundraising for community or humanitarian purposes and educational or youth activities is exempt from licensing with no restriction on number of times done per year."
     },
-    "foodsAndBeveragesSoldReadyForImmediateConsumption3": {
+    "foodsAndBeveragesSoldReadyForImmediateConsumption2": {
       "type": "entry",
       "parent": "PreparedFoods",
-      "name": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
+      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
       "description": "More info to come",
-      "examples": "Sandwiches, pizza, etc. prepared and sold by 4-H groups, church groups, schools, etc. (with no staff paid by the proceeds of the food sales). ",
+      "examples": "Burritos, egg rolls, pizza, grilled hamburgers or other meats; lemonade",
       "license": "Is required",
       "temperatureControl": "Is not required",
       "snapEligible": "Is not required",
       "testingRequired": "Is not required",
-      "regulation": "No licensing required; however, must follow “Sanitation and hygiene requirements for exempt food establishments”. Fundraising for community or humanitarian purposes and educational or youth activities is exempt from licensing with no restriction on number of times done per year."
+      "regulation": "If selling more than six times/year, vendor must have a KDA Food Establishment license. Note that a Food Processing License would be required for any WHOLESALE sales."
     },
     "nonspecializedProcessedFoods": {
       "type": "entry",
