@@ -68,9 +68,9 @@
       "children": {
         "homemadeDriedPasta": "Homemade dried pasta",
         "dryBakingMixes": "Dry baking mixes",
-        "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
-        "foodsAndBeveragesSoldReadyForImmediateConsumption": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
+        "foodsAndBeveragesPreparedOffSite": "Foods and beverages prepared off site, sold ready for immediate consumption (six or fewer times per calendar year.)",
         "foodsAndBeveragesSoldReadyForImmediateConsumption2": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year.)",
+        "foodsAndBeveragesSoldReadyForImmediateConsumption": "Foods and beverages sold ready for immediate consumption by community groups for fundraising purposes",
         "vacuumPackedFoods": "Vacuum packaged foods requiring temperature control for safety"
       }
     },

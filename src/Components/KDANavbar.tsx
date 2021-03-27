@@ -13,7 +13,7 @@ import {
     Toolbar,
     Paper,
 } from "@material-ui/core";
-import { Link } from 'react-router-dom';
+import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
 import MenuIcon from "@material-ui/icons/Menu";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
@@ -22,7 +22,7 @@ import ReportIcon from "@material-ui/icons/Report";
 import StarsIcon from '@material-ui/icons/Stars';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import { SearchBody } from './SearchBody';
+import SearchBody from './SearchBody';
 
 
 type Anchor = "top" | "left" | "bottom" | "right";
@@ -46,9 +46,10 @@ enum KDADrawerRoutes {
 
 interface KDANavbarProps { data: any }
 
-export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbarState> {
+class KDANavbar extends React.Component<KDANavbarProps & RouteComponentProps, KDANavbarState> {
     constructor(props: any) {
         super(props);
+        this.onSearch = this.onSearch.bind(this);
         this.state = {
             top: false,
             left: false,
@@ -90,7 +91,14 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
 
     onSearch = (event: any) => {
         event.preventDefault();
-        this.setState({ searchResult: [] });
+        //this.history.push("/search/" + event.target.value)
+        if (event.target.value === "") {
+            this.props.history.push("/");
+        }
+        else {
+            this.props.history.push("/search/" + event.target.value);
+        }
+        //this.setState({ searchResult: [] });
     }
 
     onChange = (event: any) => {
@@ -196,7 +204,7 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
                                         color="primary"
                                         className="searchInput"
                                         onSubmit={this.onSearch}
-                                        onChange={this.onChange}
+                                        onChange={this.onSearch}
                                     />
                                     <IconButton type="submit" aria-label="search" onClick={this.onSearch}>
                                         <SearchIcon />
@@ -213,3 +221,4 @@ export default class KDANavbar extends React.Component<KDANavbarProps, KDANavbar
         );
     }
 }
+export default withRouter(KDANavbar);

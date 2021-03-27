@@ -7,7 +7,7 @@ import KDANavbar from "./KDANavbar";
 
 
 
-export class SearchBody extends React.Component {
+export default class SearchBody extends React.Component {
 
 
 
@@ -28,7 +28,7 @@ export class SearchBody extends React.Component {
                 );
             }).map(key => (
                 <Button className="buttons2" type="primary" shape="round">
-                    <Link to={key} >{this.props.data[key].name}
+                    <Link to={ "/"+key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
                             {this.props.data[key].examples}
@@ -42,7 +42,7 @@ export class SearchBody extends React.Component {
 
 
         // returns results pulled from the Examples category
-        const result2 = Object.keys(this.props.data).filter(key => {
+        const resultExample = Object.keys(this.props.data).filter(key => {
             return this.props.data[key]
         }).filter(key => {
             if (this.props.data[key].examples !== undefined)
@@ -50,7 +50,7 @@ export class SearchBody extends React.Component {
                 );
             }).map(key => (
                 <Button className="buttons2" type="primary" shape="round">
-                    <Link to={key} >{this.props.data[key].name}
+                    <Link to={"/"+key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
                         <p className="examples">
                             {this.props.data[key].examples}
@@ -64,17 +64,10 @@ export class SearchBody extends React.Component {
                 <div className="divide">{result}</div>
                 <br>
                 </br>
-                <div className="divide">{result2}</div>
+                <div className="divide">{resultExample}</div>
                 <br>
                 </br>
             </>
-        );
-    }
-    
-    redirect(key) {
-        KDANavbar.searchInput = null;
-        return <Link to={ProductBody}>{key}</Link>;
-
-        //{< ProductBody {...key} />}>
+        ); 
     }
 }

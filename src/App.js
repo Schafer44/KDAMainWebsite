@@ -11,14 +11,15 @@ import { COERegulationsPage } from "./Pages/COERegulationsPage";
 import UpdatesPage from "./Pages/UpdatesPage";
 import AlertsPage from "./Pages/AlertsPage";
 import SearchResultsPage from "./Pages/SearchResultsPage";
-
 import KDANavbar from "./Components/KDANavbar";
 import KDAFooter from "./Components/KDAFooter";
+import SearchBody from "./Components/SearchBody";
 
 export default class App extends React.Component {
     constructor(params){
         super(params);
-        this.state = {loaded: false}
+        this.state = { loaded: false, searchTerms: "" }
+        this.search = this.search.bind(this)
     }
     componentDidMount() {
         //Fetches data.json to be sent to all futrue pages that may need the data.
@@ -27,6 +28,11 @@ export default class App extends React.Component {
                 fetch("/data.json").then(data => data.json()).then(data => this.setState({ loaded: true, info: data }));
             }
     }
+
+    search(terms) {
+        this.setState({ searchTerms:terms })
+    }
+
     render(){
         if (!this.state.loaded)
             return "loading...";
@@ -34,7 +40,7 @@ export default class App extends React.Component {
             <>
                 <Router>
 
-                        <KDANavbar data={this.state.info.data}>
+                    <KDANavbar data={this.state.info.data} searchTerms={this.state.searchTerms} search={this.search}>
                         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                         <Switch>
@@ -56,9 +62,9 @@ export default class App extends React.Component {
                             <Route path="/coeregulations">
                                 <COERegulationsPage />
                             </Route>
-                            <Route path="/search">
-                                <SearchResultsPage />
-                            </Route>
+                            <Route path="/search/:terms" render={({ match }) => {
+                                return <SearchBody data={this.state.info.data} search={match.params.terms} />
+                            }}/>
                             <Route path="/updates">
                                 <UpdatesPage updates={this.state.info.updates}/>
                             </Route>
