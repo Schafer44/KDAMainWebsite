@@ -10,7 +10,6 @@ import ReferencePage from "./Pages/ReferencePage";
 import { COERegulationsPage } from "./Pages/COERegulationsPage";
 import UpdatesPage from "./Pages/UpdatesPage";
 import AlertsPage from "./Pages/AlertsPage";
-import SearchResultsPage from "./Pages/SearchResultsPage";
 import KDANavbar from "./Components/KDANavbar";
 import KDAFooter from "./Components/KDAFooter";
 import SearchBody from "./Components/SearchBody";
