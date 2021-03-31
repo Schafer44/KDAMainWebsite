@@ -408,7 +408,7 @@
     "foodsAndBeveragesSoldReadyForImmediateConsumption2": {
       "type": "entry",
       "parent": "PreparedFoods",
-      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
+      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year)",
       "description": "More info to come",
       "examples": "Burritos, egg rolls, pizza, grilled hamburgers or other meats; lemonade",
       "license": "Is required",
@@ -720,18 +720,6 @@
       "testingRequired": "Is not required",
       "regulation": "KDA Food Establishment License or Food Processors License required for production facility. Requires recipe approval; Better Process Control School (BPCS) required. KDA Meat and Poultry inspection required if canned meat is sold wholesale. Contact Kansas State University Value Added Foods Lab for more information on recipe approval and BPCS",
       "regulationURL": "https://www.ksrevenue.org/abcstatutes.html"
-    },
-    "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": {
-      "type": "entry",
-      "parent": "PreparedFoods",
-      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
-      "description": "More info to come",
-      "examples": "Burritos, egg rolls, pizza, grilled hamburgers or other meats; lemonade",
-      "license": "Is required",
-      "temperatureControl": "Is not required",
-      "snapEligible": "Is not required",
-      "testingRequired": "Is not required",
-      "regulation": "If selling more than six times/year, vendor must have a KDA Food Establishment license. Note that a Food Processing License would be required for any WHOLESALE sales."
     },
     "alcoholicBeverages": {
       "type": "entry",
