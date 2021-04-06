@@ -1,18 +1,30 @@
 {
   "updates": {
-    "No Updates Yet": {
-      "title": "No Updates Yet",
-      "preview": "No Updates Yet",
-      "description": "Since this is a newly released app there have been no updates.",
+    "New Website": {
+      "title": "New Website",
+      "preview": "New Website",
+      "description": "Welcome to our new more searchable database of KSRE/KDA’s Foods Sold Direct to Consumers in Kansas: Regulations and Food Safety Best Practices (http://www.bookstore.ksre.ksu.edu/pubs/MF3138.pdf).  We updated the printed publication in Jan 2021, and those updates are also reflected in this database.",
       "date": "(\"02-8-2021\")"
     }
   },
   "alerts": {
-    "No alerts given": {
-      "title": "No alerts given",
-      "preview": "\"No alerts given,",
-      "description": "No alerts have been given at this time.",
-      "date": "(\"02-8-2021\")"
+    "COVID-related guidance": {
+      "title": "COVID-related guidance",
+      "preview": "KDA provided updated COVID-related guidance to farmers markets",
+      "description": "KDA provided updated COVID-related guidance to farmers markets on February 10, 2021, which is available from the top of this page: https://fromthelandofkansas.com/page/farmers-market-resources",
+      "date": "(\"04-2-2021\")"
+    },
+    "Upcoming food safety-related trainings": {
+      "title": "Upcoming food safety-related trainings",
+      "preview": "KSRE has their upcoming food safety-related trainings available",
+      "description": "KSRE has their upcoming food safety-related trainings available from: https://www.ksre.k-state.edu/foodsafety/",
+      "date": "(\"04-2-2021\")"
+    },
+    "KSRE has produce safety resources": {
+      "title": "KSRE has produce safety resources",
+      "preview": "KSRE has produce safety resources, as well as upcoming trainings, available",
+      "description": "KSRE has produce safety resources, as well as upcoming trainings, available on our website: https://www.ksre.k-state.edu/foodsafety/produce/index.html",
+      "date": "(\"04-2-2021\")"
     }
   },
   "data": {
@@ -408,7 +420,7 @@
     "foodsAndBeveragesSoldReadyForImmediateConsumption2": {
       "type": "entry",
       "parent": "PreparedFoods",
-      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
+      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption (six or more times per calendar year)",
       "description": "More info to come",
       "examples": "Burritos, egg rolls, pizza, grilled hamburgers or other meats; lemonade",
       "license": "Is required",
@@ -720,18 +732,6 @@
       "testingRequired": "Is not required",
       "regulation": "KDA Food Establishment License or Food Processors License required for production facility. Requires recipe approval; Better Process Control School (BPCS) required. KDA Meat and Poultry inspection required if canned meat is sold wholesale. Contact Kansas State University Value Added Foods Lab for more information on recipe approval and BPCS",
       "regulationURL": "https://www.ksrevenue.org/abcstatutes.html"
-    },
-    "foodAndBeveragesPreparedOnOrOffSiteImmediateConsumption": {
-      "type": "entry",
-      "parent": "PreparedFoods",
-      "name": "Foods and beverages prepared on or off site, sold ready for immediate consumption — six or more times per calendar year.",
-      "description": "More info to come",
-      "examples": "Burritos, egg rolls, pizza, grilled hamburgers or other meats; lemonade",
-      "license": "Is required",
-      "temperatureControl": "Is not required",
-      "snapEligible": "Is not required",
-      "testingRequired": "Is not required",
-      "regulation": "If selling more than six times/year, vendor must have a KDA Food Establishment license. Note that a Food Processing License would be required for any WHOLESALE sales."
     },
     "alcoholicBeverages": {
       "type": "entry",
