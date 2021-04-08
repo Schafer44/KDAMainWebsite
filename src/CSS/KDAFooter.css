@@ -17,5 +17,14 @@
 
 .linkText{
     text-decoration:none;
+    color: black;
     margin: 1em;
+}
+
+.h6{
+    color:black;
+}
+
+.link{
+    color:black;
 }

@@ -1,20 +1,9 @@
 import React from "react";
-import { ProductInfo } from "../Data/types";
 import "../CSS/RegulationsPage.css";
+
 //import { ProductInfo, ProductTypes, TestName } from "../Data/types";
-
-interface RegulationsDisplayProps {
-  productProp: ProductInfo;
-}
-interface RegulationsDisplayState {
-  productInformation: ProductInfo;
-}
-
-export class RegulationsDisplay extends React.Component<
-  RegulationsDisplayProps,
-  RegulationsDisplayState
-> {
-  constructor(props: any) {
+export class RegulationsDisplay extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       productInformation: this.props.productProp,
@@ -34,13 +23,22 @@ export class RegulationsDisplay extends React.Component<
             <br>
             </br>
             <h2>
-                <b>Regulatory Requirements</b>
+                <b>Regulatory Requirements for Direct-to-Consumer Sales</b>
             </h2>
             <p>
                 {this.state.productInformation.regulatoryRequirements
                     ? this.state.productInformation.regulatoryRequirements
                     : "No Requirements"}
             </p>
+            <a span class="url" href=
+                {this.state.productInformation.URLRegulatory
+                    ? this.state.productInformation.URLRegulatory
+                    : ""
+                }>{this.state.productInformation.URLRegulatory
+                    ? this.state.productInformation.URLRegulatory
+                    : ""
+                }
+            </a>
             <br>
             </br>
             <h2>
@@ -71,7 +69,19 @@ export class RegulationsDisplay extends React.Component<
                     ? this.state.productInformation.productTesting.toString()
                     : "None Required"}
             </p>
-            <br>
+            <a span class="url" href=
+                {this.state.productInformation.URLTesting
+                    ? this.state.productInformation.URLTesting
+                    : ""
+                }>{this.state.productInformation.URLTesting
+                    ? this.state.productInformation.URLTesting
+                    : ""
+                }
+            </a>
+            {
+
+            }
+            {/*<br>
             </br>
             <h2>
                 <b>Tempurature Control</b>
@@ -80,9 +90,9 @@ export class RegulationsDisplay extends React.Component<
                 {this.state.productInformation.tempuratureControl
                     ? this.state.productInformation.tempuratureControl.toString()
                     : "None Required"}
-            </p>
+            </p>*/}
         <br />
       </>
-    );
+        );
   }
 }

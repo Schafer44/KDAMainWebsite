@@ -1,8 +1,10 @@
 #boxes {
-    display:grid;
+    display: grid;
     border-top: 1px solid grey;
     justify-items: center;
     grid-template-columns: 100%;
+    width: 95%;
+    margin: auto;
 }
 
 #stars {
@@ -15,6 +17,23 @@
     margin-top: 5%;
     background-color: #7137bd;
     padding-top: 15px;
+    padding-bottom: 35px;
+    
+}
+.examples {
+    color: grey;
+}
+.buttons2 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+    height: 75px;
+    align-content: space-evenly;
+    margin-top: 5%;
+    color: white;
+    background-color: #512888;
+    padding-top: 15px;
+    font-size: small;
     padding-bottom: 35px;
 }
 
@@ -29,7 +48,6 @@
     margin-bottom: 0;
     font-weight: 600;
     background-color: solid gray;
-    opacity: 80%
 }
 
 

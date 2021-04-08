@@ -17,5 +17,11 @@ h2 {
         box-shadow: 5px 10px 8px black;
     }
 
-p {
+a {
+    color: #0000EE;
+    font-size: 18px;
+}
+
+.search {
+    color: white;
 }
