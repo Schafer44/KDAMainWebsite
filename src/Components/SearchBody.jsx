@@ -27,6 +27,8 @@ export default class SearchBody extends React.Component {
             return (this.props.data[key].name.toLowerCase().includes(this.props.search.toLowerCase())
                 );
             }).map(key => (
+                // makes a button for each example matching the key
+                  // the when html tag prints an items examples if they have any
                 <Button className="buttons2" type="primary" shape="round">
                     <Link to={ "/"+key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
@@ -49,6 +51,8 @@ export default class SearchBody extends React.Component {
                 return (this.props.data[key].examples.toLowerCase().includes(this.props.search.toLowerCase())
                 );
             }).map(key => (
+                // makes a button for each example matching the key
+                // the when html tag prints an items examples if they have any
                 <Button className="buttons2" type="primary" shape="round">
                     <Link to={"/"+key} >{this.props.data[key].name}
                     <when {...this.props.data[key].examples != null}>
