@@ -969,7 +969,7 @@
     },
     "SCOBY": {
       "type": "entry",
-      "parent": "OtherFoodProduct",
+      "parent": "OtherFoodProducts",
       "name": "Symbiotic culture of bacteria and yeast (SCOBY) ",
       "description": "More info to come",
       "examples": "Used for production of kombucha",
