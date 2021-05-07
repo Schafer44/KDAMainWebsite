@@ -96,7 +96,7 @@ class KDANavbar extends React.Component<KDANavbarProps & RouteComponentProps, KD
             this.props.history.push("/");
         }
         else {
-            this.props.history.push("/search/" + event.target.value);
+            this.props.history.push("/search/" + event.target.value.replace("/","").replace("?","").replace("#","").replace("%",""));
         }
         //this.setState({ searchResult: [] });
     }
