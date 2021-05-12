@@ -190,21 +190,14 @@
       }
     },
     "bakedGoods": {
-      "type": "entry",
+      "type": "category",
       "parent": "OtherFoodProducts",
       "name": "Baked goods (home kitchen)",
-      "description": "",
-      "examples": "Cookies, breads, cakes, cinnamon rolls, fruit pies, fruit cobbler",
-      "license": "Is not required",
-      "temperatureControl": "Is not required",
-      "snapEligible": "Is not required",
-      "testingRequired": "Is not required",
-      "regulation": "Follow labeling requirements (listed below). Note that breads with cheese baked in/on them require testing to determine their category (see testing table below).",
       "children": {
         "icing": "Icing with >65% sugar",
         "breadWithCheeseBakedInOrOnTop": "Bread with cheese baked in/on top",
         "pecanPie": "Pecan Pie",
-        "bakedProductsWithPotentialHazards": "Baked products with potentially hazardous dairy and egg  products",
+        "bakedProductsWithPotentialHazards": "Baked products with potentially hazardous dairy and egg products",
         "PowderedSugarAndMilkIcing": "Powdered sugar/ milk icing"
       }
     },
@@ -576,7 +569,7 @@
     "bakedProductsWithPotentialHazards": {
       "type": "entry",
       "parent": "bakedGoods",
-      "name": "Baked products with potentially hazardous dairy and egg  products",
+      "name": "Baked products with potentially hazardous dairy and egg products",
       "description": "More info to come",
       "examples": "Cheesecake, cream filled cupcakes or donuts, cream cheese-based frostings or fillings, cream or meringue pies, custards, pumpkin pie, quiche",
       "license": "Is required",
