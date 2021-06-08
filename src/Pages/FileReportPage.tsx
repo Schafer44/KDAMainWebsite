@@ -22,7 +22,7 @@ export default class FileReportPage extends React.Component {
                         </Grid>
                     <Grid item xs={6}>
                              <Box display="flex" flexDirection="column" justifyContent="center" border={2} padding={4} className="leftboxbackground">
-                                <img className="center" src="http://www.foodsafetykansas.org/images/KDHE-Logo.png" alt="Kansas Department of Health & Environment" width="300" height="200" />
+                                <img className="center" src="KDHE-Logo.png" alt="Kansas Department of Health & Environment" width="300"/>
                                 <Typography align="left" variant="h4"> <b>Report illness</b> caused by a restaurant, food item, or event </Typography>
                                 <Typography align="center" variant="h5"> -Call 877-427-7317  </Typography>
                                 <Typography align="center">
@@ -34,7 +34,7 @@ export default class FileReportPage extends React.Component {
                         </Grid>
                         <Grid item xs={6}>
                             <Box display="flex" flexDirection="column" justifyContent="center" border={2} padding={2} className="rightboxbackground">
-                                <img className="center" src="http://www.foodsafetykansas.org/images/KDA_Logo.png" alt="Department of Agriculture" width="300" height="200"/>
+                                <img className="center" src="KDA_Logo.png" alt="Department of Agriculture" width="300"/>
                                 <Typography align="left" variant="h4"> Report a problem with a restaurant or food that <b>did NOT cause illness</b> </Typography>
                                 <Typography align="center">
                                     <Link variant="h5" align="center" href="https://agriculture.ks.gov/kda-services/complaint-form/food-safety-and-lodging-complaint">

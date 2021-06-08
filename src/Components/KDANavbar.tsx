@@ -78,9 +78,6 @@ class KDANavbar extends React.Component<KDANavbarProps & RouteComponentProps, KD
     };
 
     onClick = (index: number) => {
-
-        console.log("is this even being called");
-        console.log("index: ", index);
         switch (index) {
             case 0:
                 return <Link to="/search"></Link>;
@@ -91,20 +88,19 @@ class KDANavbar extends React.Component<KDANavbarProps & RouteComponentProps, KD
 
     onSearch = (event: any) => {
         event.preventDefault();
-        //this.history.push("/search/" + event.target.value)
         if (event.target.value === "") {
             this.props.history.push("/");
         }
         else {
             this.props.history.push("/search/" + event.target.value);
         }
-        //this.setState({ searchResult: [] });
     }
 
     onChange = (event: any) => {
         event.preventDefault();
         this.setState({ search: event.target.value });
     }
+    
     menuDrawerIconSelection = (text: string) => {
         switch (text) {
             case "Home":
@@ -161,6 +157,7 @@ class KDANavbar extends React.Component<KDANavbarProps & RouteComponentProps, KD
                             <Grid item xs={12} sm={1} md lg xl>
                                 <React.Fragment key="left">
                                     <IconButton
+                                        className="hamburger"
                                         onClick={this.toggleDrawer("left", true)}
                                         edge="start"
                                         color="inherit"

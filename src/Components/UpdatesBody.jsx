@@ -50,7 +50,7 @@ export default class UpdatesBody extends React.Component {
             <ScrollableBox>
                 {Object.values(this.props.updates).map( (update, index) => (
                     <StyledCard key={index} >
-                        <CardHeader title = {update.title} subheader={update.date} className="updateTitle" />
+                        <CardHeader title = {update.title} subheader={update.date + ""} className="updateTitle" />
                         <CardContent>
                             <Typography variant="body2" color="textSecondary" component="p">
                                 {update.preview}

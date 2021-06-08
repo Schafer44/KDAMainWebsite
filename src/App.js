@@ -26,7 +26,7 @@ export default class App extends React.Component {
             {
                 fetch("/farmers-market-app/data.json")
                 .then(data => data.json())
-                .then(data => this.setState({ loaded: true, info: data });
+                .then(data => this.setState({ loaded: true, info: data }));
             }
     }
 

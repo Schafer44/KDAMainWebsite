@@ -11,7 +11,6 @@
     color: white;
 }
 
-
-svg {
-    color: black;
+.updateTitle .MuiCardHeader-subheader {
+    color: rgba(255,255,255,0.54);
 }

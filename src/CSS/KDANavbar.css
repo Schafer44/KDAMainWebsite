@@ -33,5 +33,7 @@
 }
 .searchIcon {
     margin-right: 0;
-
+}
+.hamburger svg {
+    fill: white;
 }
