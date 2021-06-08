@@ -9,17 +9,7 @@ import KDANavbar from "./KDANavbar";
 
 export default class SearchBody extends React.Component {
 
-
-
-
-
     render() {
-        console.log("test5", this.props);
-        if (this.props) { }
-
-
-        console.log(this.props)
-
         // returns results pulled from the name category
         const result = Object.keys(this.props.data).filter(key => {
             return this.props.data[key]
@@ -27,18 +17,17 @@ export default class SearchBody extends React.Component {
             return (this.props.data[key].name.toLowerCase().includes(this.props.search.toLowerCase())
                 );
             }).map(key => (
-                <Button className="buttons2" type="primary" shape="round">
-                    <Link to={ "/"+key} >{this.props.data[key].name}
-                    <when {...this.props.data[key].examples != null}>
-                        <p className="examples">
-                            {this.props.data[key].examples}
-                        </p>
-                        </when>
+                <Button key={key} className="buttons2" type="primary" shape="round">
+                    <Link to={ "/"+key}>
+                        {this.props.data[key].name}
+                        {(this.props.data[key].examples != null) ?
+                            <p className="examples">
+                                {this.props.data[key].examples}
+                            </p>
+                        : ""}
                     </Link>
                 </Button>
             ));
-
-
 
 
         // returns results pulled from the Examples category
@@ -49,13 +38,14 @@ export default class SearchBody extends React.Component {
                 return (this.props.data[key].examples.toLowerCase().includes(this.props.search.toLowerCase())
                 );
             }).map(key => (
-                <Button className="buttons2" type="primary" shape="round">
-                    <Link to={"/"+key} >{this.props.data[key].name}
-                    <when {...this.props.data[key].examples != null}>
+                <Button key={key} className="buttons2" type="primary" shape="round">
+                    <Link to={"/"+key} >
+                        {this.props.data[key].name}
+                        {this.props.data[key].examples != null ?
                         <p className="examples">
                             {this.props.data[key].examples}
                         </p>
-                        </when>
+                        : ""}
                     </Link>
                 </Button>
             ));

@@ -13,28 +13,29 @@
 
 .buttons {
     width: 75vw;
+    height: auto;
     align-content: space-evenly;
     margin-top: 5%;
     background-color: #7137bd;
     padding-top: 15px;
-    padding-bottom: 35px;
-    
+    padding-bottom: 15px;
+    white-space: normal;
 }
 .examples {
     color: grey;
 }
 .buttons2 {
-    overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
+    height: auto;
     width: 90%;
-    height: 75px;
+    min-height: 75px;
     align-content: space-evenly;
     margin-top: 5%;
     color: white;
     background-color: #512888;
     padding-top: 15px;
     font-size: small;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
 }
 
 .lastButton {

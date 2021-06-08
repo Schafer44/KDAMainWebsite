@@ -21,10 +21,12 @@ export default class App extends React.Component {
         this.search = this.search.bind(this)
     }
     componentDidMount() {
-        //Fetches data.json to be sent to all futrue pages that may need the data.
+        //Fetches data.json to be sent to all future pages that may need the data.
         if (!this.state.loaded)
             {
-                fetch("/data.json").then(data => data.json()).then(data => this.setState({ loaded: true, info: data }));
+                fetch("/farmers-market-app/data.json")
+                .then(data => data.json())
+                .then(data => this.setState({ loaded: true, info: data });
             }
     }
 
@@ -37,7 +39,7 @@ export default class App extends React.Component {
             return "loading...";
         return (
             <>
-                <Router>
+                <Router basename="/farmers-market-app/">
 
                     <KDANavbar data={this.state.info.data} searchTerms={this.state.searchTerms} search={this.search}>
                         {/* A <Switch> looks through its children <Route>s and
@@ -71,11 +73,9 @@ export default class App extends React.Component {
                                 <AlertsPage alerts={this.state.info.alerts}/>
                             </Route>
                             <Route path="/:id" render={({ match }) => {
-                                console.log(match);
                                 return <Homepage name={match.params.id} data={this.state.info.data[match.params.id]} />
                             }} />
                             <Route path="/" exact render={({ match }) => {
-                                console.log(match);
                                 return <Homepage name="Home" data={this.state.info.data["Home"]} />
                             }} />
                         </Switch>

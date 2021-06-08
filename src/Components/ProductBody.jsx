@@ -49,7 +49,6 @@ export class ProductBody extends React.Component{
 
       };
       //creating a object for use in RegulationsDisplay
-      console.log("Test 2" ,this.props.data);
           par = {
               name: this.props.data.name, 
               category: this.props.data.parents, 

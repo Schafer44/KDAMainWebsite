@@ -16,8 +16,8 @@ export class HomeBody extends React.Component{
     this.state = {isToggleOn: true};
   }
   //Renders display
-    render() {
-console.log(this.props);
+  render() {
+    console.log(this.props.data);
     return (
         <>
           <div className="divide">
@@ -38,8 +38,8 @@ console.log(this.props);
 		//maps out all the children of selected item
         return Object.keys(this.props.data.children).map((key) => {
             return (
-                <Button className="buttons" type="primary" shape="round">
-                <Link to={key}>{this.props.data.children[key]}</Link>
+                <Button key={key} className="buttons" type="primary" shape="round">
+                     <Link to={key}>{this.props.data.children[key]}</Link>
                 </Button>
             );
         });
